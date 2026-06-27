@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://rasheed-systems.vercel.app'),
   title: {
     template: '%s — Rasheed Systems',
-    default: 'Rasheed Systems — AI systems & software that run your business',
+    default: 'Rasheed Systems — We build the systems that run your business.',
   },
   description: 'Rasheed Systems builds AI agents, automation, and custom software for companies in the US, UK, UAE, India, and Australia. Built by two brothers.',
   openGraph: {
