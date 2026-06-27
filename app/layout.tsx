@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://rasheed-systems.vercel.app'),
   title: {
     template: '%s — Rasheed Systems',
     default: 'Rasheed Systems — AI systems & software that run your business',
@@ -10,7 +11,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     siteName: 'Rasheed Systems',
-    images: [{ url: 'https://rasheedsystems.com/og-image.png' }],
+    images: [{ url: '/og-image.png' }],
   },
   twitter: { card: 'summary_large_image' },
 }

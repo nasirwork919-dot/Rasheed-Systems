@@ -9,8 +9,8 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Contact — Rasheed Systems',
     description: 'Start a project with Rasheed Systems. Tell us what you\'re building and we\'ll map out how we\'d approach it.',
-    images: [{ url: 'https://rasheedsystems.com/og-image.png' }],
-    url: 'https://rasheedsystems.com/contact',
+    images: [{ url: '/og-image.png' }],
+    url: '/contact',
   },
 }
 
