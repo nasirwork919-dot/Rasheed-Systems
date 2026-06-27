@@ -365,3 +365,45 @@ footer{border-top:1px solid var(--line);padding:44px 0;margin-top:0}
   .reveal{opacity:1;transform:none}
   .kt .line{opacity:1;transform:none}
 }
+
+/* ---------- WORK SLIDER ---------- */
+.slider-wrap{position:relative}
+.slider-track{
+  display:flex;
+  gap:18px;
+  overflow-x:scroll;
+  scroll-snap-type:x mandatory;
+  cursor:grab;
+  scrollbar-width:none;
+  padding-bottom:4px;
+  -webkit-overflow-scrolling:touch;
+}
+.slider-track::-webkit-scrollbar{display:none}
+.slider-card{
+  flex:0 0 360px;
+  scroll-snap-align:start;
+}
+.slider-nav{
+  display:flex;
+  gap:10px;
+  margin-top:24px;
+  justify-content:flex-end;
+}
+.slider-btn{
+  background:var(--ink-3);
+  border:1px solid var(--line-strong);
+  color:var(--text);
+  width:44px;
+  height:44px;
+  border-radius:50%;
+  font-size:18px;
+  cursor:pointer;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  transition:background .2s,border-color .2s,color .2s;
+  line-height:1;
+}
+.slider-btn:hover{background:var(--ink-2);border-color:var(--signal);color:var(--signal)}
+@media(max-width:768px){.slider-card{flex:0 0 300px}}
+@media(max-width:520px){.slider-card{flex:0 0 82vw}}

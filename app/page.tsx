@@ -3,6 +3,7 @@ import { useEffect, useRef } from 'react'
 import Link from 'next/link'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import WorkSlider from '@/components/WorkSlider'
 import { useReveal } from '@/hooks/useReveal'
 import { useCardGlow } from '@/hooks/useCardGlow'
 
@@ -209,7 +210,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* WORK PREVIEW */}
+        {/* WORK SLIDER */}
         <section className="lead-block">
           <div className="wrap">
             <div className="sec-head reveal">
@@ -217,34 +218,9 @@ export default function Home() {
                 <div className="mono" style={{ marginBottom: 14 }}><span className="sec-index">02</span> &nbsp;Selected work</div>
                 <h2>Systems we&apos;ve shipped.</h2>
               </div>
-              <p>A few of the platforms we&apos;ve designed, built, and put into production. <Link href="/work" style={{ color: 'var(--signal)' }}>See all →</Link></p>
+              <p>All 9 platforms — drag or use arrows to browse. <Link href="/work" style={{ color: 'var(--signal)' }}>Full details →</Link></p>
             </div>
-            <div className="work-grid">
-              <Link className="card reveal" data-tilt href="https://n3rve.ai/" target="_blank" rel="noopener">
-                <div className="card-top"><span className="status"><span className="live" />Live</span><span className="tag">AI Platform</span></div>
-                <div className="card-preview"><img src="/work/n3rve-home.jpg" alt="N3rve preview" /></div>
-                <h3>N3rve</h3>
-                <p>An AI operating system for teams — unifying AI, billing, customers, and content under one roof so teams stop switching tabs and ship more.</p>
-                <div className="meta"><span>Role · <b>Architecture &amp; build</b></span><span>Stack · <b>AI · Docker · Node · Postgres</b></span></div>
-                <span className="card-visit">Visit live site <span className="arrow">↗</span></span>
-              </Link>
-              <Link className="card reveal" data-tilt href="https://justcarsale.com/" target="_blank" rel="noopener">
-                <div className="card-top"><span className="status"><span className="live" />Live</span><span className="tag">Marketplace</span></div>
-                <div className="card-preview"><img src="/work/justcarsale-home.jpg" alt="JustCarSale preview" /></div>
-                <h3>JustCarSale</h3>
-                <p>A global automotive marketplace connecting buyers, sellers, dealers, and workshops across 18+ modules — from listings and inspections to a full back office.</p>
-                <div className="meta"><span>Role · <b>Backend lead</b></span><span>Stack · <b>React · TypeScript · Postgres</b></span></div>
-                <span className="card-visit">Visit live site <span className="arrow">↗</span></span>
-              </Link>
-              <Link className="card reveal" data-tilt href="https://insurancewallets.com/" target="_blank" rel="noopener">
-                <div className="card-top"><span className="status"><span className="live" />Live</span><span className="tag">Marketplace</span></div>
-                <div className="card-preview"><img src="/work/img3-home.jpg" alt="Insurance Wallets preview" /></div>
-                <h3>Insurance Wallets</h3>
-                <p>An AI-powered insurance platform and broker/lawyer marketplace — policies, claims, a community forum, and gated access in one secure place.</p>
-                <div className="meta"><span>Role · <b>Full build</b></span><span>Stack · <b>React · Node</b></span></div>
-                <span className="card-visit">Visit live site <span className="arrow">↗</span></span>
-              </Link>
-            </div>
+            <WorkSlider />
           </div>
         </section>
 
