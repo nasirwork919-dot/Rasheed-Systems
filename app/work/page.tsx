@@ -10,7 +10,6 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Work — Rasheed Systems',
     description: 'Selected systems built and shipped by Rasheed Systems: AI platforms, marketplaces, CRMs, and automation.',
-    images: [{ url: '/og-image.png' }],
     url: '/work',
   },
 }

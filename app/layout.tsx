@@ -11,7 +11,6 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     siteName: 'Rasheed Systems',
-    images: [{ url: '/og-image.png' }],
   },
   twitter: { card: 'summary_large_image' },
 }
