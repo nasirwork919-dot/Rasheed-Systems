@@ -228,6 +228,34 @@ export default function Home() {
         <section className="lead-block">
           <div className="wrap">
             <div className="cta-box reveal">
+              <a
+                href="https://www.fiverr.com/s/Eg3AENe"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="cta-fiverr-badge"
+              >
+                <span className="stars">★★★★★</span>
+                <span className="rating">5.0</span>
+                <span>·</span>
+                <span>Verified on Fiverr</span>
+                <span className="arrow">↗</span>
+              </a>
+
+              <div className="cta-reviews">
+                <div className="cta-review">
+                  <blockquote>&ldquo;Great seller. Did project as described. Went far and beyond. Will definitely return for more.&rdquo;</blockquote>
+                  <cite><span className="flag">🇬🇧</span> Jack H. &mdash; United Kingdom</cite>
+                </div>
+                <div className="cta-review">
+                  <blockquote>&ldquo;Exceptional full-stack developer! SEO techniques significantly boosted our online visibility. A true asset for any project.&rdquo;</blockquote>
+                  <cite><span className="flag">🇺🇸</span> janinfervallim &mdash; United States</cite>
+                </div>
+                <div className="cta-review">
+                  <blockquote>&ldquo;Fast, professional, delivered exactly what I needed within budget and on time. Amazing work!&rdquo;</blockquote>
+                  <cite><span className="flag">🇨🇦</span> Vanessa K. &mdash; Canada</cite>
+                </div>
+              </div>
+
               <div className="mono">Let&apos;s build something</div>
               <h2>Ready to start?</h2>
               <p>Tell us what you need built. We&apos;ll tell you straight whether it&apos;s a fit and how we&apos;d approach it.</p>

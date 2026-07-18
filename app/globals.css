@@ -199,6 +199,39 @@ nav{display:flex;align-items:center;justify-content:space-between;height:68px}
 .cta-box .btn-ghost{border-color:var(--paper-line);color:var(--paper-ink)}
 .cta-box .btn-ghost:hover{border-color:var(--paper-ink)}
 
+/* ---------- CTA SOCIAL PROOF ---------- */
+.cta-fiverr-badge{
+  display:inline-flex;align-items:center;gap:8px;
+  font-family:var(--mono);font-size:11px;letter-spacing:.07em;text-transform:uppercase;
+  border:1px solid var(--paper-line);border-radius:30px;padding:8px 18px;
+  color:var(--paper-muted);margin-bottom:32px;
+  transition:border-color .2s,color .2s;
+}
+.cta-fiverr-badge:hover{border-color:var(--band-accent);color:var(--paper-ink)}
+.cta-fiverr-badge .stars{color:#1DBF73;letter-spacing:1px;font-size:12px}
+.cta-fiverr-badge .rating{color:var(--paper-ink);font-weight:500}
+
+.cta-reviews{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:12px;
+  margin-bottom:48px;text-align:left;
+}
+.cta-review{
+  background:var(--paper-2);border:1px solid var(--paper-line);
+  border-radius:10px;padding:20px 22px;
+  display:flex;flex-direction:column;gap:14px;
+}
+.cta-review blockquote{
+  font-size:13.5px;line-height:1.6;color:var(--paper-ink);
+  font-style:italic;margin:0;
+}
+.cta-review cite{
+  font-family:var(--mono);font-size:10.5px;letter-spacing:.05em;text-transform:uppercase;
+  color:var(--paper-muted);font-style:normal;display:flex;align-items:center;gap:7px;
+}
+.cta-review cite .flag{font-style:normal;font-size:14px}
+@media(max-width:768px){.cta-reviews{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.cta-reviews{grid-template-columns:1fr}}
+
 /* ---------- FOOTER ---------- */
 footer{border-top:1px solid var(--line);padding:44px 0;margin-top:0}
 .foot{display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
