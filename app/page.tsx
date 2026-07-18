@@ -7,12 +7,10 @@ import WorkSlider from '@/components/WorkSlider'
 import CtaSection from '@/components/CtaSection'
 import { useReveal } from '@/hooks/useReveal'
 import { useCardGlow } from '@/hooks/useCardGlow'
-import { useCursorGlow } from '@/hooks/useCursorGlow'
 
 export default function Home() {
   useReveal()
   useCardGlow()
-  useCursorGlow()
   const heroRef = useRef<HTMLElement>(null)
   const ktRef = useRef<HTMLDivElement>(null)
   const spotRef = useRef<HTMLDivElement>(null)

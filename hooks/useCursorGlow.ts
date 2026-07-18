@@ -6,6 +6,9 @@ export function useCursorGlow() {
     if (matchMedia('(prefers-reduced-motion: reduce)').matches) return
     if (matchMedia('(hover: none)').matches) return
 
+    const section = document.querySelector<HTMLElement>('.hero, .page-head')
+    if (!section) return
+
     const el = document.createElement('div')
     el.className = 'cursor-glow'
     document.body.appendChild(el)
@@ -25,10 +28,21 @@ export function useCursorGlow() {
     }
 
     const onMove = (e: MouseEvent) => {
+      const rect = section.getBoundingClientRect()
+      const inSection = e.clientY >= rect.top && e.clientY <= rect.bottom
+
       tx = e.clientX
       ty = e.clientY
-      if (!visible) { el.style.opacity = '1'; visible = true }
+
+      if (inSection && !visible) {
+        el.style.opacity = '1'
+        visible = true
+      } else if (!inSection && visible) {
+        el.style.opacity = '0'
+        visible = false
+      }
     }
+
     const onLeave = () => { el.style.opacity = '0'; visible = false }
 
     window.addEventListener('mousemove', onMove)
