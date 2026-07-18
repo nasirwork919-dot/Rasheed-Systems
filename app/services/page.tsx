@@ -3,6 +3,7 @@ import Link from 'next/link'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import PageEffects from '@/components/PageEffects'
+import CtaSection from '@/components/CtaSection'
 
 export const metadata: Metadata = {
   title: 'Services',
@@ -133,19 +134,13 @@ export default function ServicesPage() {
         </section>
 
         {/* CTA */}
-        <section className="lead-block">
-          <div className="wrap">
-            <div className="cta-box reveal">
-              <div className="mono">Let&apos;s build something</div>
-              <h2>Know what you need built?</h2>
-              <p>Tell us about it. We&apos;ll tell you straight whether it&apos;s a fit and how we&apos;d approach it.</p>
-              <div className="cta-actions">
-                <Link href="/contact" className="btn btn-primary">Start a project <span className="arrow">↗</span></Link>
-                <Link href="/work" className="btn btn-ghost">See our work</Link>
-              </div>
-            </div>
-          </div>
-        </section>
+        <CtaSection
+          label="Let's build something"
+          headline="Know what you need built?"
+          sub="Tell us about it. We'll tell you straight whether it's a fit and how we'd approach it."
+          ghostHref="/work"
+          ghostLabel="See our work"
+        />
       </main>
       <Footer />
     </>

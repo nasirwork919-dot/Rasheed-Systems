@@ -203,6 +203,48 @@ nav{display:flex;align-items:center;justify-content:space-between;height:68px}
 .cta-box .btn-ghost{border-color:var(--paper-line);color:var(--paper-ink)}
 .cta-box .btn-ghost:hover{border-color:var(--paper-ink)}
 
+/* ---------- CTA SECTION (split layout) ---------- */
+.cta-section{background:var(--paper);color:var(--paper-ink);padding:100px 0}
+.cta-inner{display:grid;grid-template-columns:1fr .95fr;gap:72px;align-items:center}
+.cta-eyebrow{color:var(--band-accent);margin-bottom:24px}
+.cta-left h2{
+  font-family:var(--display);font-weight:800;
+  font-size:clamp(38px,5.5vw,64px);letter-spacing:-.03em;line-height:1.0;
+  color:var(--paper-ink);margin-bottom:20px;
+}
+.cta-left p{
+  color:var(--paper-muted);font-size:17px;line-height:1.7;
+  margin-bottom:36px;max-width:36ch;
+}
+.cta-btns{display:flex;gap:14px;flex-wrap:wrap}
+.cta-section .btn-ghost{border-color:var(--paper-line);color:var(--paper-ink)}
+.cta-section .btn-ghost:hover{border-color:var(--paper-ink)}
+
+.cta-review-stack{display:flex;flex-direction:column;gap:10px;margin-top:20px}
+.cta-review-item{
+  background:var(--paper-2);border:1px solid var(--paper-line);
+  border-radius:10px;padding:16px 20px;
+  transition:border-color .2s;
+}
+.cta-review-item:hover{border-color:rgba(255,255,255,.22)}
+.cta-review-item blockquote{
+  font-size:13.5px;line-height:1.6;color:var(--paper-ink);
+  font-style:italic;margin:0 0 10px 0;
+}
+.cta-review-item cite{
+  font-family:var(--mono);font-size:10.5px;letter-spacing:.05em;
+  text-transform:uppercase;color:var(--paper-muted);font-style:normal;
+  display:flex;align-items:center;gap:7px;
+}
+@media(max-width:880px){
+  .cta-inner{grid-template-columns:1fr;gap:44px}
+  .cta-review-stack .cta-review-item:last-child{display:none}
+}
+@media(max-width:520px){
+  .cta-section{padding:70px 0}
+  .cta-right{display:none}
+}
+
 /* ---------- CTA SOCIAL PROOF ---------- */
 .cta-fiverr-badge{
   display:inline-flex;align-items:center;gap:8px;

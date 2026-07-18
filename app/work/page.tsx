@@ -3,6 +3,7 @@ import Link from 'next/link'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import PageEffects from '@/components/PageEffects'
+import CtaSection from '@/components/CtaSection'
 
 export const metadata: Metadata = {
   title: 'Work',
@@ -173,19 +174,13 @@ export default function WorkPage() {
         </section>
 
         {/* CTA */}
-        <section className="lead-block">
-          <div className="wrap">
-            <div className="cta-box reveal">
-              <div className="mono">Work with us</div>
-              <h2>Want to be on this list?</h2>
-              <p>Tell us what you need built. We&apos;ll tell you how we&apos;d approach it.</p>
-              <div className="cta-actions">
-                <Link href="/contact" className="btn btn-primary">Start a project <span className="arrow">↗</span></Link>
-                <Link href="/services" className="btn btn-ghost">What we do</Link>
-              </div>
-            </div>
-          </div>
-        </section>
+        <CtaSection
+          label="Work with us"
+          headline="Want to be on this list?"
+          sub="Tell us what you need built. We'll tell you how we'd approach it."
+          ghostHref="/services"
+          ghostLabel="What we do"
+        />
       </main>
       <Footer />
     </>
