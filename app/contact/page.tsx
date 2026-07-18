@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import ContactForm from './ContactForm'
+import PageEffects from '@/components/PageEffects'
 
 export const metadata: Metadata = {
   title: 'Contact',
@@ -16,6 +17,7 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <>
+      <PageEffects />
       <Header />
       <main>
         <section className="page-head">
