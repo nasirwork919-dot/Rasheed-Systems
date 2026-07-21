@@ -104,7 +104,7 @@ export const projects: Project[] = [
   {
     slug: 'scholarsurge',
     tag: 'GoHighLevel',
-    img: '/work/scholarsurge/preview.webp',
+    img: '/work/scholarsurge/preview (1).webp',
     title: 'ScholarSurge',
     desc: 'CRM, an AI booking bot, and the automations behind a student-enrollment business.',
     role: 'Full build',

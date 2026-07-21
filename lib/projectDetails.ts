@@ -35,8 +35,8 @@ export const projectDetails: Record<string, ProjectDetail> = {
       'Reporting dashboard for pipeline and conversion',
     ],
     gallery: [
-      { src: '/work/scholarsurge/preview.webp',       caption: 'Analytics dashboard' },
-      { src: '/work/scholarsurge/preview (1).webp',   caption: 'Enrollment pipeline' },
+      { src: '/work/scholarsurge/preview (1).webp',   caption: 'Analytics dashboard' },
+      { src: '/work/scholarsurge/preview.webp',       caption: 'Enrollment pipeline' },
       { src: '/work/scholarsurge/preview (2).webp',   caption: 'AI booking bot' },
       { src: '/work/scholarsurge/preview (3).webp',   caption: 'Multi-source setter' },
       { src: '/work/scholarsurge/preview (4).webp',   caption: 'Facebook lead capture' },

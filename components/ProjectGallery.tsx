@@ -38,7 +38,6 @@ export default function ProjectGallery({ images }: { images: GalleryImage[] }) {
             aria-label={`Open ${img.caption}`}
           >
             <img src={img.src} alt={img.caption} />
-            <figcaption>{img.caption}</figcaption>
           </figure>
         ))}
       </div>
@@ -60,7 +59,6 @@ export default function ProjectGallery({ images }: { images: GalleryImage[] }) {
             onClick={e => e.stopPropagation()}
           />
           <button className="lightbox-btn lightbox-next" onClick={e => { e.stopPropagation(); next() }} aria-label="Next">→</button>
-          <p className="lightbox-caption">{images[open].caption}</p>
         </div>
       )}
     </>
