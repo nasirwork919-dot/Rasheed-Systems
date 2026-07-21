@@ -481,6 +481,16 @@ footer{border-top:1px solid var(--line);padding:44px 0;margin-top:0}
 @keyframes cardFade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
 .work-grid .card{animation:cardFade .25s ease both}
 
+/* ---------- WORK SECTION HEADINGS ---------- */
+.work-section-head{display:flex;align-items:center;gap:12px;margin-bottom:24px}
+.work-section-label{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.work-section-count{
+  font-family:var(--mono);font-size:10px;
+  background:var(--signal-soft);color:var(--signal);
+  border:1px solid rgba(184,74,44,.18);border-radius:30px;
+  padding:2px 10px;
+}
+
 /* ---------- CASE STUDY ---------- */
 .case-page-head{padding-bottom:0}
 .case-back{
