@@ -66,6 +66,7 @@ export const projectDetails: Record<string, ProjectDetail> = {
       'Facebook Lead Ads → CRM pipeline with stage tracking and tagging',
     ],
     gallery: [
+      { src: '/work/strive-soccer-academy/Strive-Dashboard.webp',     caption: 'GoHighLevel dashboard and pipeline overview' },
       { src: '/work/strive-soccer-academy/strive-agent.webp',         caption: 'AI setter qualifying and booking parents over SMS' },
       { src: '/work/strive-soccer-academy/strive-execution-log.webp', caption: 'Lead pipeline and execution tracking in GoHighLevel' },
       { src: '/work/strive-soccer-academy/strive-workflow.webp',      caption: 'Post-booking automation: waiver, confirmations, and reminders' },
