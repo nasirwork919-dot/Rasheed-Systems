@@ -111,4 +111,14 @@ export const projects: Project[] = [
     stack: 'GoHighLevel · Conversation AI · Workflows',
     category: 'GHL',
   },
+  {
+    slug: 'strive-soccer-academy',
+    tag: 'GoHighLevel · AI Booking',
+    img: '/work/strive-soccer-academy/strive-agent.webp',
+    title: 'Strive Soccer Academy',
+    desc: 'An end-to-end AI trial-booking system — a conversational setter that qualifies parents and routes each child into the right age-group calendar across 8 sessions.',
+    role: 'Full build',
+    stack: 'GoHighLevel · Conversation AI · WordPress · Workflows',
+    category: 'GHL',
+  },
 ]

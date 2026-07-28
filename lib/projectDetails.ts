@@ -43,4 +43,33 @@ export const projectDetails: Record<string, ProjectDetail> = {
       { src: '/work/scholarsurge/preview (5).webp',   caption: 'Automations' },
     ],
   },
+
+  'strive-soccer-academy': {
+    slug: 'strive-soccer-academy',
+    title: 'Strive Soccer Academy',
+    category: 'GoHighLevel',
+    industry: 'Youth Sports',
+    platform: 'GoHighLevel · WordPress',
+    scope: 'Full build',
+    oneLiner: 'An end-to-end AI trial-booking system for a youth soccer academy — a conversational setter that qualifies and books leads into the right age-group calendar, plus a rebuilt website booking flow and full post-booking automation.',
+    body: [
+      'Strive Soccer Academy runs free trial assessment sessions for kids, grouped by birth-year cohort and split into boys\' and girls\' sessions — eight calendars in total. Leads arrived from Facebook lead ads into GoHighLevel, but nothing engaged them automatically, and the website funnelled every parent onto a single page showing all eight calendars at once.',
+      'I built a complete booking system across GoHighLevel and WordPress. An AI setter now greets each parent over SMS or WhatsApp, finds out the child\'s birth year and gender one question at a time, and books the trial into the correct calendar automatically — no parent ever has to choose from eight options. On the website side, a two-question survey replaced the cluttered calendar page: pick a birth year, then son or daughter, and only the relevant calendar loads. Every booking then triggers a workflow that sends the waiver, confirmation, and staged reminders without any manual effort.',
+    ],
+    whatWentIn: [
+      'AI setter that qualifies and books leads over SMS/WhatsApp',
+      'Automatic routing across 8 trial calendars by age and gender',
+      'Parent-facing survey replacing 8 calendars with the one that applies',
+      'Site-wide button repoint + 301 redirect for legacy links',
+      'Waiver dispatch, confirmations, and staged reminders on every booking',
+      'Automated post-trial player-profile intake, 4 hours after the session',
+      'Facebook Lead Ads → CRM pipeline with stage tracking and tagging',
+    ],
+    gallery: [
+      { src: '/work/strive-soccer-academy/strive-agent.webp',         caption: 'AI setter qualifying and booking parents over SMS' },
+      { src: '/work/strive-soccer-academy/strive-execution-log.webp', caption: 'Lead pipeline and execution tracking in GoHighLevel' },
+      { src: '/work/strive-soccer-academy/strive-workflow.webp',      caption: 'Post-booking automation: waiver, confirmations, and reminders' },
+      { src: '/work/strive-soccer-academy/strive-form.webp',          caption: 'Automated player-profile intake form sent after the trial' },
+    ],
+  },
 }

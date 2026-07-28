@@ -39,6 +39,7 @@ export default function WorkPage() {
                 <div className="ph-row"><span className="k"><span className="dot" />JustCarSale</span><span className="v">Online</span></div>
                 <div className="ph-row"><span className="k"><span className="dot" />Insurance Wallets</span><span className="v">Online</span></div>
                 <div className="ph-row"><span className="k"><span className="dot" />ScholarSurge</span><span className="v">Live</span></div>
+                <div className="ph-row"><span className="k"><span className="dot" />Strive Soccer Academy</span><span className="v">Live</span></div>
                 <div className="ph-row"><span className="k"><span className="dot" />+ 7 more</span><span className="v">Online</span></div>
               </div>
             </div>
@@ -49,7 +50,7 @@ export default function WorkPage() {
         <section className="lead-block" style={{ paddingBottom: 0 }}>
           <div className="wrap">
             <div className="stat-row reveal">
-              <div className="stat"><div className="num">10</div><div className="lbl">Live products you can visit</div></div>
+              <div className="stat"><div className="num">11</div><div className="lbl">Live products you can visit</div></div>
               <div className="stat"><div className="num">5</div><div className="lbl">Countries — US · UK · UAE · IN · AU</div></div>
               <div className="stat"><div className="num">100%</div><div className="lbl">Built &amp; run by the founders</div></div>
             </div>
