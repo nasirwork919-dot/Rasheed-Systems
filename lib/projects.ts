@@ -1,6 +1,6 @@
 export type Project = {
-  href?: string     // external URL (omit if slug-only)
-  slug?: string     // internal detail page → /work/[slug]
+  href?: string
+  slug?: string
   tag: string
   img: string
   title: string
@@ -8,6 +8,7 @@ export type Project = {
   role: string
   stack: string
   category: 'Web' | 'GHL'
+  homeGroup?: 'web' | 'ai' | 'ghl'
 }
 
 export const projects: Project[] = [
@@ -19,7 +20,7 @@ export const projects: Project[] = [
     desc: 'An AI operating system for teams — unifying AI, billing, customers, and content under one roof so teams stop switching tabs and ship more.',
     role: 'Architecture & build',
     stack: 'AI · Docker · Node · Postgres',
-    category: 'Web',
+    category: 'Web', homeGroup: 'ai',
   },
   {
     href: 'https://justcarsale.com/',
@@ -29,7 +30,7 @@ export const projects: Project[] = [
     desc: 'A global automotive marketplace connecting buyers, sellers, dealers, and workshops across 18+ modules — from listings and inspections to a full back office.',
     role: 'Backend lead',
     stack: 'React · TypeScript · Postgres',
-    category: 'Web',
+    category: 'Web', homeGroup: 'web',
   },
   {
     href: 'https://insurancewallets.com/',
@@ -39,7 +40,7 @@ export const projects: Project[] = [
     desc: 'An AI-powered insurance platform and broker/lawyer marketplace — policies, claims, a community forum, and gated access in one secure place.',
     role: 'Full build',
     stack: 'React · Node',
-    category: 'Web',
+    category: 'Web', homeGroup: 'web',
   },
   {
     href: 'https://mia.profitlifter.com/',
@@ -49,7 +50,7 @@ export const projects: Project[] = [
     desc: 'An AI marketing strategist that builds a personalized growth plan around your answers — no templates, no fluff — with a reseller-ready architecture.',
     role: 'Platform build',
     stack: 'AI · Web · Postgres',
-    category: 'Web',
+    category: 'Web', homeGroup: 'ai',
   },
   {
     href: 'https://www.zaindubai.com/',
@@ -59,7 +60,7 @@ export const projects: Project[] = [
     desc: 'A Dubai real estate platform for buying and renting property — advanced search, community guides, and free instant valuation tools.',
     role: 'Full build',
     stack: 'React · Web',
-    category: 'Web',
+    category: 'Web', homeGroup: 'web',
   },
   {
     href: 'https://www.eu-worldcrm.com/',
@@ -69,7 +70,7 @@ export const projects: Project[] = [
     desc: 'A travel-agency command center — leads, walk-ins, GST invoicing, payments, and multi-role access, with live performance dashboards.',
     role: 'Full build',
     stack: 'React · Node · Postgres',
-    category: 'Web',
+    category: 'Web', homeGroup: 'ai',
   },
   {
     href: 'https://chatsites.app/',
@@ -79,7 +80,7 @@ export const projects: Project[] = [
     desc: 'An AI-powered conversational website builder that turns visitors into leads — flow blocks, a command center, and a full publish flow.',
     role: 'Engineering',
     stack: 'React · Node',
-    category: 'Web',
+    category: 'Web', homeGroup: 'ai',
   },
   {
     href: 'https://www.jwalinjewels.com/',
@@ -89,7 +90,7 @@ export const projects: Project[] = [
     desc: 'A luxury jewelry store — engagement rings, custom design, and loose diamonds, with virtual appointments and a refined buying experience.',
     role: 'Full build',
     stack: 'E-commerce · Web',
-    category: 'Web',
+    category: 'Web', homeGroup: 'web',
   },
   {
     href: 'https://www.uktherapies.co.uk/',
@@ -99,7 +100,7 @@ export const projects: Project[] = [
     desc: 'A wellness and therapy studio site — treatments, pricing, and online booking wrapped in a calm, premium experience.',
     role: 'Full build',
     stack: 'Web · Booking',
-    category: 'Web',
+    category: 'Web', homeGroup: 'web',
   },
   {
     slug: 'scholarsurge',
@@ -109,7 +110,7 @@ export const projects: Project[] = [
     desc: 'CRM, an AI booking bot, and the automations behind a student-enrollment business.',
     role: 'Full build',
     stack: 'GoHighLevel · Conversation AI · Workflows',
-    category: 'GHL',
+    category: 'GHL', homeGroup: 'ghl',
   },
   {
     slug: 'strive-soccer-academy',
@@ -119,6 +120,6 @@ export const projects: Project[] = [
     desc: 'An end-to-end AI trial-booking system — a conversational setter that qualifies parents and routes each child into the right age-group calendar across 8 sessions.',
     role: 'Full build',
     stack: 'GoHighLevel · Conversation AI · WordPress · Workflows',
-    category: 'GHL',
+    category: 'GHL', homeGroup: 'ghl',
   },
 ]

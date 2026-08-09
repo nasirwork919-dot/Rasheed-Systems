@@ -564,6 +564,102 @@ html{scroll-behavior:smooth;scroll-padding-top:80px}
 .mob-menu-foot{flex-shrink:0;padding-top:20px}
 .mob-cta{font-size:13px!important}
 
+/* ---------- HOME WORK SECTIONS ---------- */
+.hw-root{padding-bottom:0}
+.hw-section{padding:64px 0}
+.hw-ai-band{background:var(--paper)}
+
+/* section labels */
+.hw-sec-head{display:flex;align-items:center;gap:14px;margin-bottom:36px}
+.hw-sec-label{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.hw-sec-label-inv{color:var(--paper-muted)}
+.hw-sec-count{font-family:var(--mono);font-size:10px;color:var(--muted-2);border:1px solid var(--line);border-radius:20px;padding:2px 10px}
+.hw-sec-count-inv{color:var(--paper-muted);border-color:var(--paper-line)}
+.hw-sec-rule{flex:1;height:1px;background:var(--line)}
+.hw-sec-head-inv .hw-sec-rule{background:var(--paper-line)}
+
+/* ── WEB GRID (3-col) ── */
+.hw-web-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+
+/* ── AI GRID (2-col) ── */
+.hw-ai-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+
+/* ── GHL GRID (1-col stacked) ── */
+.hw-ghl-grid{display:flex;flex-direction:column;gap:20px}
+
+/* ── BASE CARD ── */
+.hw-card{
+  background:var(--ink-2);border:1px solid var(--line);border-radius:12px;
+  overflow:hidden;display:flex;flex-direction:column;
+  transition:border-color .25s, transform .25s, box-shadow .25s;
+}
+.hw-card:hover{border-color:var(--line-strong);transform:translateY(-3px);box-shadow:0 12px 36px rgba(34,29,24,.08)}
+
+/* AI card variant */
+.hw-ai-card{
+  background:rgba(255,255,255,.04);border-color:var(--paper-line);
+  border-top:2px solid var(--signal);
+}
+.hw-ai-card:hover{border-color:var(--signal);box-shadow:0 12px 40px rgba(0,0,0,.4)}
+
+.hw-preview{aspect-ratio:16/9;overflow:hidden;background:var(--ink-3)}
+.hw-ai-card .hw-preview{background:rgba(255,255,255,.06)}
+
+.hw-body{padding:20px;display:flex;flex-direction:column;flex:1}
+.hw-card-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}
+.hw-tag{font-family:var(--mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.hw-tag-inv{color:var(--paper-muted)}
+.hw-tag-ghl{color:var(--signal)}
+.hw-live{font-family:var(--mono);font-size:10px;color:var(--muted);display:flex;align-items:center;gap:5px}
+.hw-live-inv{color:var(--paper-muted)}
+.hw-title{font-family:var(--display);font-weight:700;font-size:18px;letter-spacing:-.01em;margin-bottom:8px;color:var(--text)}
+.hw-title-inv{color:var(--paper-ink)}
+.hw-desc{font-size:13px;line-height:1.65;color:var(--muted);flex:1;margin-bottom:16px}
+.hw-desc-inv{color:var(--paper-muted)}
+.hw-foot{display:flex;align-items:center;justify-content:space-between;margin-top:auto;gap:12px}
+.hw-meta{font-size:10px;letter-spacing:.06em;color:var(--muted-2)}
+.hw-meta-inv{color:rgba(179,166,149,.6)}
+
+/* small visit buttons */
+.hw-btn{
+  font-family:var(--mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;
+  padding:6px 14px;border-radius:30px;white-space:nowrap;flex-shrink:0;
+  border:1px solid var(--line-strong);color:var(--muted);
+  transition:background .2s, color .2s, border-color .2s;
+}
+.hw-btn:hover{border-color:var(--signal);color:var(--signal);background:var(--signal-soft)}
+.hw-btn-inv{border-color:var(--paper-line);color:var(--paper-muted)}
+.hw-btn-inv:hover{border-color:var(--signal);color:var(--signal);background:rgba(184,74,44,.15)}
+.hw-btn-signal{border-color:var(--signal);color:var(--signal)}
+.hw-btn-signal:hover{background:var(--signal);color:#fff}
+
+/* ── GHL LANDSCAPE CARD ── */
+.hw-ghl-card{
+  display:grid;grid-template-columns:380px 1fr;
+  background:var(--ink-2);border:1px solid var(--line);border-radius:12px;overflow:hidden;
+  border-left:3px solid var(--signal);
+  transition:border-color .25s, transform .25s, box-shadow .25s;
+}
+.hw-ghl-card:hover{transform:translateY(-3px);box-shadow:0 16px 48px rgba(34,29,24,.1)}
+.hw-ghl-img{overflow:hidden;background:var(--ink-3)}
+.hw-ghl-img img{width:100%;height:100%;object-fit:cover;display:block}
+.hw-ghl-body{padding:28px 32px;display:flex;flex-direction:column;justify-content:center}
+.hw-ghl-badge{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--signal);background:var(--signal-soft);border:1px solid rgba(184,74,44,.2);border-radius:20px;padding:3px 10px}
+.hw-ghl-body .hw-title{font-size:22px;margin-bottom:10px}
+.hw-ghl-body .hw-desc{font-size:14px;margin-bottom:20px}
+
+/* responsive */
+@media(max-width:1024px){
+  .hw-web-grid{grid-template-columns:repeat(2,1fr)}
+  .hw-ghl-card{grid-template-columns:260px 1fr}
+}
+@media(max-width:768px){
+  .hw-web-grid{grid-template-columns:1fr}
+  .hw-ai-grid{grid-template-columns:1fr}
+  .hw-ghl-card{grid-template-columns:1fr;grid-template-rows:200px 1fr}
+  .hw-ghl-img{height:200px}
+}
+
 /* ---------- WORK FILTER ---------- */
 .work-filter{display:flex;gap:8px;margin-bottom:32px;flex-wrap:wrap}
 .work-filter-btn{

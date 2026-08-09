@@ -3,7 +3,7 @@ import { useEffect, useRef } from 'react'
 import Link from 'next/link'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
-import WorkSlider from '@/components/WorkSlider'
+import HomeWorkSections from '@/components/HomeWorkSections'
 import CtaSection from '@/components/CtaSection'
 import { useReveal } from '@/hooks/useReveal'
 import { useCardGlow } from '@/hooks/useCardGlow'
@@ -211,18 +211,18 @@ export default function Home() {
           </div>
         </section>
 
-        {/* WORK SLIDER */}
-        <section className="lead-block">
+        {/* WORK SECTIONS */}
+        <section className="lead-block" style={{ paddingBottom: 0 }}>
           <div className="wrap">
             <div className="sec-head reveal">
               <div>
                 <div className="mono" style={{ marginBottom: 14 }}><span className="sec-index">02</span> &nbsp;Selected work</div>
                 <h2>Systems we&apos;ve shipped.</h2>
               </div>
-              <p>All 9 platforms — drag or use arrows to browse. <Link href="/work" style={{ color: 'var(--signal)' }}>Full details →</Link></p>
+              <p>11 platforms across web, AI, and GoHighLevel. <Link href="/work" style={{ color: 'var(--signal)' }}>Full case studies →</Link></p>
             </div>
-            <WorkSlider />
           </div>
+          <HomeWorkSections />
         </section>
 
         {/* CTA */}
