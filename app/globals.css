@@ -637,7 +637,10 @@ html{scroll-behavior:smooth;scroll-padding-top:80px}
 }
 .hw2-pimg-on{opacity:1;clip-path:inset(0 0 0% 0);z-index:2}
 
-.hw2-pimg img{width:100%;height:100%;object-fit:cover;display:block}
+.hw2-pimg img{
+  width:100%;height:100%;object-fit:cover;display:block;
+  filter:saturate(.82) contrast(1.08) sepia(6%);
+}
 
 .hw2-pimg-overlay{display:none}
 .hw2-pimg-foot{display:none}
