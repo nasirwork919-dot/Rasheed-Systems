@@ -43,12 +43,12 @@ export default function Header() {
 
   const closeMenu = () => {
     setClosing(true)
-    // items out (≈0.43s) → overlay slides down (delay 0.46s, dur 0.40s) → done at 0.86s
+    // items out (≈0.78s) → overlay slides down (delay 0.78s, dur 0.60s) → done at 1.38s
     timer.current = setTimeout(() => {
       setOpen(false)
       setClosing(false)
       document.body.style.overflow = ''
-    }, 920)
+    }, 1450)
   }
 
   return (
