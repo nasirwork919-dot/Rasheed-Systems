@@ -15,7 +15,7 @@ export default function Header() {
   const [scrolled, setScrolled] = useState(false)
   const [open,     setOpen]     = useState(false)
   const [closing,  setClosing]  = useState(false)
-  const timer = useRef<ReturnType<typeof setTimeout>>()
+  const timer = useRef<ReturnType<typeof setTimeout> | undefined>(undefined)
 
   useEffect(() => {
     const fn = () => setScrolled(window.scrollY > 12)
