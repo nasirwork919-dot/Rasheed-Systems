@@ -292,9 +292,39 @@ footer{border-top:1px solid var(--line);padding:44px 0;margin-top:0}
   z-index:0;will-change:transform;
 }
 
-/* ---------- REVEAL ---------- */
-.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease, transform .7s ease}
-.reveal.in{opacity:1;transform:none}
+/* ---------- SMOOTH SCROLL ---------- */
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+
+/* ---------- REVEAL — fall from sky ---------- */
+.reveal{
+  opacity:0;
+  transform:translateY(-48px);
+  transition:opacity .95s cubic-bezier(.22,1,.36,1), transform .95s cubic-bezier(.22,1,.36,1);
+}
+.reveal.in{opacity:1;transform:translateY(0)}
+
+/* stagger helpers */
+.delay-1{transition-delay:.12s}
+.delay-2{transition-delay:.26s}
+.delay-3{transition-delay:.42s}
+
+/* ---------- IMAGE REVEAL — top-to-bottom roll ---------- */
+.img-reveal{overflow:hidden}
+.img-reveal img{
+  clip-path:inset(0 0 100% 0);
+  transform:scale(1.07) translateY(-4%);
+  opacity:0;
+  transition:
+    clip-path 1.5s cubic-bezier(.22,1,.36,1),
+    transform  1.7s cubic-bezier(.22,1,.36,1),
+    opacity    .7s ease;
+  will-change:clip-path,transform;
+}
+.img-reveal.img-in img{
+  clip-path:inset(0 0 0% 0);
+  transform:scale(1) translateY(0);
+  opacity:1;
+}
 
 /* ============================================================
    KINETIC HERO (home)
@@ -461,6 +491,7 @@ footer{border-top:1px solid var(--line);padding:44px 0;margin-top:0}
 @media (prefers-reduced-motion:reduce){
   *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
   .reveal{opacity:1;transform:none}
+  .img-reveal img{clip-path:none;transform:none;opacity:1}
   .kt .line{opacity:1;transform:none}
 }
 

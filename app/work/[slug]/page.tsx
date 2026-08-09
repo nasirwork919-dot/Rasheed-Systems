@@ -68,7 +68,7 @@ export default async function ProjectPage(
         {/* HERO IMAGE */}
         <section className="lead-block" style={{ paddingBottom: 0 }}>
           <div className="wrap">
-            <div className="case-hero reveal">
+            <div className="case-hero img-reveal">
               <img src={detail.gallery[0].src} alt={detail.gallery[0].caption} />
             </div>
           </div>

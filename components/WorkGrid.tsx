@@ -13,7 +13,7 @@ function CardInner({ project }: { project: Project }) {
         <span className="status"><span className="live" />Live</span>
         <span className="tag">{project.tag}</span>
       </div>
-      <div className="card-preview">
+      <div className="card-preview img-reveal">
         <img src={project.img} alt={`${project.title} preview`} />
       </div>
       <h3>{project.title}</h3>

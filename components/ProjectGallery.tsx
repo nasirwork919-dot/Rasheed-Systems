@@ -30,7 +30,7 @@ export default function ProjectGallery({ images }: { images: GalleryImage[] }) {
         {images.map((img, i) => (
           <figure
             key={img.src}
-            className="gallery-thumb"
+            className="gallery-thumb img-reveal"
             onClick={() => setOpen(i)}
             role="button"
             tabIndex={0}

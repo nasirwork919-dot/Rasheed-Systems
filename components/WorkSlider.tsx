@@ -49,7 +49,7 @@ export default function WorkSlider() {
                 <span className="status"><span className="live" />Live</span>
                 <span className="tag">{p.tag}</span>
               </div>
-              <div className="card-preview">
+              <div className="card-preview img-reveal">
                 <img src={p.img} alt={`${p.title} preview`} draggable={false} />
               </div>
               <h3>{p.title}</h3>
