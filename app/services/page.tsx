@@ -3,29 +3,68 @@ import Link from 'next/link'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import PageEffects from '@/components/PageEffects'
-import ServiceRail from '@/components/ServiceRail'
-import { services } from '@/lib/services'
-import ServiceDiagram from '@/components/ServiceDiagram'
+import ServicesHeroMark from '@/components/ServicesHeroMark'
+import AiAutomationDetail from '@/components/AiAutomationDetail'
+import GoHighLevelDetail from '@/components/GoHighLevelDetail'
+import WebAppsSaasDetail from '@/components/WebAppsSaasDetail'
+import CrmMarketplaceDetail from '@/components/CrmMarketplaceDetail'
 
-const diagramKinds = ['agents', 'saas', 'ghl', 'marketplace'] as const
+const serviceIndex = [
+  { number: '01', label: 'AI & automation', href: '#service-ai-automation' },
+  { number: '02', label: 'GoHighLevel', href: '#service-gohighlevel' },
+  { number: '03', label: 'Web apps & SaaS', href: '#service-web-apps-saas' },
+  { number: '04', label: 'CRMs & marketplaces', href: '#service-crms-marketplaces' },
+] as const
 
 export const metadata: Metadata = { title: 'Services', description: 'AI agents and automation, SaaS and web apps, GoHighLevel builds, custom CRMs and marketplaces—built by Rasheed Systems.' }
 
 export default function ServicesPage() {
   return <><PageEffects /><Header /><main id="main-content" tabIndex={-1}>
-    <section className="inner-hero"><div className="wrap"><span className="section-label">Services / 04 chapters</span><h1>Engineering the parts<br />your business <em>runs on.</em></h1><p>We go deep on four connected disciplines, then stay close enough to make the finished system work in practice.</p></div></section>
-    <section className="services-intro"><div className="wrap section-heading reveal"><span className="section-label">01 / Service chapters</span><h2>From repeated work<br />to dependable systems.</h2><p>Each engagement begins with the operation, not a predetermined technology.</p></div></section>
-    <ServiceRail compact />
+    <section className="services-hero">
+      <div className="wrap">
+        <div className="services-hero-main">
+          <div className="services-hero-copy">
+            <span className="section-label">Services / Rasheed Systems</span>
+            <h1>Software built around the way you work.</h1>
+            <p>AI automation, GoHighLevel, web applications, and custom CRMs. Built around your business and connected to the tools you use.</p>
+            <div className="services-hero-actions">
+              <Link className="button primary" href="/contact">Discuss your project <span aria-hidden="true">↗</span></Link>
+              <a className="services-hero-secondary" href="#service-ai-automation">Explore services <span aria-hidden="true">↓</span></a>
+            </div>
+          </div>
+          <ServicesHeroMark />
+        </div>
+        <nav className="services-hero-index" aria-label="Service index">
+          {serviceIndex.map(item => <a href={item.href} key={item.number}><span>{item.number}</span><strong>{item.label}</strong><i aria-hidden="true">↘</i></a>)}
+        </nav>
+        <p className="services-hero-note">From a focused integration to a complete product.</p>
+      </div>
+    </section>
     <section className="service-details"><div className="wrap">
-      {services.map((service, index) => <article className="service-detail reveal" key={service.number}>
-        <span className="chapter-number">S—{service.number}</span>
-        <div><h2>{service.title}</h2><p>{service.text}</p></div>
-        <div className="capability-list">{service.list.map(item => <span key={item}>{item}</span>)}</div>
-        <ServiceDiagram kind={diagramKinds[index]} />
-      </article>)}
+      <AiAutomationDetail />
+      <GoHighLevelDetail />
+      <WebAppsSaasDetail />
+      <CrmMarketplaceDetail />
     </div></section>
-    <section className="technology-section"><div className="wrap reveal"><span className="section-label">02 / Working stack</span><div className="technology-list">{['React / Next.js','Node / Express','PostgreSQL','Docker','Stripe','AI APIs','GoHighLevel','WordPress'].map(item => <span key={item}>{item}</span>)}</div></div></section>
-    <section className="process-section"><div className="wrap"><div className="section-heading reveal"><span className="section-label">03 / How we work</span><h2>No mystery.<br />Just visible progress.</h2><p>The connecting line advances as each stage enters view.</p></div><ol className="process-line reveal"><li><span>01</span><h3>Map it</h3><p>Design around how the business works.</p></li><li><span>02</span><h3>Build it</h3><p>Ship working slices in tight loops.</p></li><li><span>03</span><h3>Ship it</h3><p>Test, deploy, and document the system.</p></li><li><span>04</span><h3>Run it</h3><p>Support and improve after launch.</p></li></ol></div></section>
-    <section className="contact-ending"><div className="wrap reveal"><span className="section-label">A useful first conversation</span><h2>What needs to work better?</h2><Link className="button primary" href="/contact">Start with the problem <span>↗</span></Link></div></section>
+    <section className="services-closing" aria-labelledby="services-closing-title"><div className="wrap reveal">
+      <div className="services-closing-intro">
+        <span className="section-label">05 / YOUR NEXT STEP</span>
+        <h2 id="services-closing-title">Start with the problem.<br />We’ll map the build.</h2>
+        <p>Tell us what you want to improve, what you already use, and where you need help.</p>
+        <div className="services-closing-action">
+          <Link className="button primary" href="/contact">Discuss your project <span aria-hidden="true">↗</span></Link>
+          <span>A short outline is enough to start.</span>
+        </div>
+      </div>
+      <div className="services-closing-guidance">
+        <h3>A useful starting point</h3>
+        <ol>
+          <li><span>01</span><div><h4>The goal</h4><p>What would you like to make easier?</p></div></li>
+          <li><span>02</span><div><h4>The current setup</h4><p>Which tools or systems do you use?</p></div></li>
+          <li><span>03</span><div><h4>The priorities</h4><p>What matters most for the first version?</p></div></li>
+        </ol>
+      </div>
+      <p className="services-closing-location"><span>Based in Pakistan.</span><span>Working worldwide.</span></p>
+    </div></section>
   </main><Footer /></>
 }
