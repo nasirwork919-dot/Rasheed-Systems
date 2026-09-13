@@ -1,79 +1,21 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import PageEffects from '@/components/PageEffects'
-import WorkGrid from '@/components/WorkGrid'
-import CtaSection from '@/components/CtaSection'
+import WorkStage from '@/components/WorkStage'
+import { projects } from '@/lib/projects'
+import ProjectLink from '@/components/ProjectLink'
 
-export const metadata: Metadata = {
-  title: 'Work',
-  description: 'Selected systems built and shipped by Rasheed Systems: AI platforms, marketplaces, CRMs, GoHighLevel builds, and automation.',
-  openGraph: {
-    title: 'Work — Rasheed Systems',
-    description: 'Selected systems built and shipped by Rasheed Systems: AI platforms, marketplaces, CRMs, and automation.',
-    url: '/work',
-  },
-}
+export const metadata: Metadata = { title: 'Work', description: 'Selected AI platforms, marketplaces, CRMs, GoHighLevel builds, and automation engineered by Rasheed Systems.' }
 
 export default function WorkPage() {
-  return (
-    <>
-      <PageEffects />
-      <Header />
-      <main>
-        <section className="page-head">
-          <div className="ph-glow" />
-          <div className="wrap">
-            <div className="ph-grid">
-              <div className="ph-left">
-                <div className="eyebrow mono"><span className="bar" />Selected work</div>
-                <h1>Systems we&apos;ve built and <span className="accent">shipped</span>.</h1>
-                <p>Real platforms running in production — AI agents, marketplaces, CRMs, GoHighLevel builds, and automation that businesses depend on every day.</p>
-              </div>
-              <div className="ph-panel reveal">
-                <div className="ph-panel-head">
-                  <span className="ph-panel-title">Live systems</span>
-                  <span className="ph-panel-tag"><span className="live" />All online</span>
-                </div>
-                <div className="ph-row"><span className="k"><span className="dot" />N3rve</span><span className="v">Online</span></div>
-                <div className="ph-row"><span className="k"><span className="dot" />JustCarSale</span><span className="v">Online</span></div>
-                <div className="ph-row"><span className="k"><span className="dot" />Insurance Wallets</span><span className="v">Online</span></div>
-                <div className="ph-row"><span className="k"><span className="dot" />ScholarSurge</span><span className="v">Live</span></div>
-                <div className="ph-row"><span className="k"><span className="dot" />Strive Soccer Academy</span><span className="v">Live</span></div>
-                <div className="ph-row"><span className="k"><span className="dot" />+ 7 more</span><span className="v">Online</span></div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* STATS */}
-        <section className="lead-block" style={{ paddingBottom: 0 }}>
-          <div className="wrap">
-            <div className="stat-row reveal">
-              <div className="stat"><div className="num">11</div><div className="lbl">Live products you can visit</div></div>
-              <div className="stat"><div className="num">5</div><div className="lbl">Countries — US · UK · UAE · IN · AU</div></div>
-              <div className="stat"><div className="num">100%</div><div className="lbl">Built &amp; run by the founders</div></div>
-            </div>
-          </div>
-        </section>
-
-        {/* WORK GRID */}
-        <section className="lead-block">
-          <div className="wrap">
-            <WorkGrid />
-          </div>
-        </section>
-
-        {/* CTA */}
-        <CtaSection
-          label="Work with us"
-          headline="Want to be on this list?"
-          sub="Tell us what you need built. We'll tell you how we'd approach it."
-          ghostHref="/services"
-          ghostLabel="What we do"
-        />
-      </main>
-      <Footer />
-    </>
-  )
+  return <><PageEffects /><Header /><main id="main-content" tabIndex={-1}>
+    <section className="inner-hero work-hero"><div className="wrap"><span className="section-label">Work / 11 projects</span><h1>Systems with<br /><em>real jobs to do.</em></h1><p>Project interfaces, scopes, and technology from the portfolio—without invented performance claims or decorative status labels.</p></div></section>
+    <section className="work-stage-section"><div className="wrap"><WorkStage /></div></section>
+    <section className="archive-section"><div className="wrap"><div className="section-heading reveal"><span className="section-label">Archive / All projects</span><h2>Eleven builds.<br />Two full case studies.</h2><p>Case studies stay on this site. Other projects open their external project URL in a new tab.</p></div>
+      <div className="archive-list">{projects.map((project, index) => <ProjectLink project={project} className="archive-row reveal" key={project.slug ?? project.href}><span>{String(index + 1).padStart(2, '0')}</span><strong>{project.title}</strong><span>{project.tag}</span><span>{project.role}</span><span>{project.slug ? 'Read case study' : 'External site'} ↗</span></ProjectLink>)}</div>
+    </div></section>
+    <section className="contact-ending"><div className="wrap reveal"><span className="section-label">Build the next one</span><h2>Bring us the complicated part.</h2><Link className="button primary" href="/contact">Start a project <span>↗</span></Link></div></section>
+  </main><Footer /></>
 }

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import Header from '@/components/Header'
@@ -6,148 +7,33 @@ import Footer from '@/components/Footer'
 import PageEffects from '@/components/PageEffects'
 import ProjectGallery from '@/components/ProjectGallery'
 import { projectDetails } from '@/lib/projectDetails'
+import { projects } from '@/lib/projects'
 
-export async function generateMetadata(
-  { params }: { params: Promise<{ slug: string }> }
-): Promise<Metadata> {
-  const { slug } = await params
-  const detail = projectDetails[slug]
-  if (!detail) return {}
-  return {
-    title: detail.title,
-    description: detail.oneLiner,
-    openGraph: {
-      title: `${detail.title} — Rasheed Systems`,
-      description: detail.oneLiner,
-      url: `/work/${slug}`,
-    },
-  }
-}
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> { const { slug } = await params; const item = projectDetails[slug]; return item ? { title: item.title, description: item.oneLiner } : {} }
+export function generateStaticParams() { return Object.keys(projectDetails).map(slug => ({ slug })) }
 
-export async function generateStaticParams() {
-  return Object.keys(projectDetails).map(slug => ({ slug }))
-}
-
-export default async function ProjectPage(
-  { params }: { params: Promise<{ slug: string }> }
-) {
+export default async function ProjectPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params
   const detail = projectDetails[slug]
   if (!detail) notFound()
+  const caseProjects = projects.filter(project => project.slug)
+  const next = caseProjects[(caseProjects.findIndex(project => project.slug === slug) + 1) % caseProjects.length]
 
-  return (
-    <>
-      <PageEffects />
-      <Header />
-      <main>
-
-        {/* HERO */}
-        <section className="page-head case-page-head">
-          <div className="ph-glow" />
-          <div className="wrap">
-            <Link href="/work" className="case-back mono reveal">← Back to work</Link>
-            <div className="case-badge reveal">{detail.category}</div>
-            <h1 className="case-title reveal">{detail.title}</h1>
-            <p className="case-oneliner reveal">{detail.oneLiner}</p>
-
-            <div className="case-spec reveal">
-              {[
-                { k: 'Platform', v: detail.platform },
-                { k: 'Industry', v: detail.industry },
-                { k: 'Scope',    v: detail.scope },
-              ].map(({ k, v }) => (
-                <div key={k} className="case-spec-item">
-                  <div className="k">{k}</div>
-                  <div className="v">{v}</div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* HERO IMAGE */}
-        <section className="lead-block" style={{ paddingBottom: 0 }}>
-          <div className="wrap">
-            <div className="case-hero img-reveal">
-              <img src={detail.gallery[0].src} alt={detail.gallery[0].caption} />
-            </div>
-          </div>
-        </section>
-
-        {/* BODY */}
-        <section className="lead-block">
-          <div className="wrap">
-            <div className="case-layout">
-
-              <div className="case-body reveal">
-                {detail.body.map((para, i) => <p key={i}>{para}</p>)}
-
-                <div className="case-what">
-                  <h3>What went into it</h3>
-                  <div className="case-what-list">
-                    {detail.whatWentIn.map((item, i) => (
-                      <div key={i} className="case-what-item">
-                        <span className="check">✓</span>
-                        <span>{item}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-
-            </div>
-          </div>
-        </section>
-
-        {/* GALLERY */}
-        <section className="lead-block" style={{ paddingTop: 0 }}>
-          <div className="wrap">
-            <div className="case-gallery reveal">
-              <h3>Screenshots</h3>
-              <ProjectGallery images={detail.gallery.slice(1)} />
-            </div>
-          </div>
-        </section>
-
-        {/* CTA */}
-        <section className="cta-section">
-          <div className="wrap">
-            <div className="cta-inner reveal">
-              <div className="cta-left">
-                <div className="mono cta-eyebrow">Work with us</div>
-                <h2>Want something like this built?</h2>
-                <p>Tell us what your business runs on. We&apos;ll map out how to automate it.</p>
-                <div className="cta-btns">
-                  <Link href="/contact" className="btn btn-primary">Start a project <span className="arrow">↗</span></Link>
-                  <Link href="/work" className="btn btn-ghost">See all work</Link>
-                </div>
-              </div>
-              <div className="cta-right">
-                <a href="https://www.fiverr.com/s/Eg3AENe" target="_blank" rel="noopener noreferrer" className="cta-fiverr-badge">
-                  <span className="stars">★★★★★</span>
-                  <span className="rating">5.0</span>
-                  <span>·</span>
-                  <span>Verified on Fiverr</span>
-                  <span className="arrow">↗</span>
-                </a>
-                <div className="cta-review-stack">
-                  {[
-                    { quote: "Great seller. Went far and beyond. Will definitely return.", name: "Jack H.", flag: "🇬🇧", country: "United Kingdom" },
-                    { quote: "Exceptional full-stack developer! Significantly boosted our online visibility.", name: "janinfervallim", flag: "🇺🇸", country: "United States" },
-                  ].map((r, i) => (
-                    <div key={i} className="cta-review-item">
-                      <blockquote>&ldquo;{r.quote}&rdquo;</blockquote>
-                      <cite><span className="flag">{r.flag}</span>{r.name} &mdash; {r.country}</cite>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-      </main>
-      <Footer />
-    </>
-  )
+  return <><PageEffects /><Header /><main id="main-content" tabIndex={-1}>
+    <section className="case-hero"><div className="wrap"><Link href="/work" className="line-link">← All work</Link><span className="section-label">Case study / {detail.category}</span><h1>{detail.title}</h1><p>{detail.oneLiner}</p><dl className="case-spec"><div><dt>Platform</dt><dd>{detail.platform}</dd></div><div><dt>Industry</dt><dd>{detail.industry}</dd></div><div><dt>Scope</dt><dd>{detail.scope}</dd></div></dl></div></section>
+    <div className="wrap case-hero-image reveal"><Image src={detail.gallery[0].src} alt={detail.gallery[0].caption} fill priority sizes="(max-width: 1200px) 100vw, 1200px" /></div>
+    <section className="case-story"><div className="wrap case-layout">
+      <nav className="case-nav" aria-label="Case study chapters"><span>On this page</span><a href="#challenge">Challenge</a><a href="#approach">Approach</a><a href="#system">System</a><a href="#result">Result</a></nav>
+      <div className="case-chapters">
+        <article id="challenge" className="reveal"><span className="section-label">01 / Challenge</span><h2>Where the operation was getting stuck.</h2><p>{detail.body[0]}</p></article>
+        <article id="approach" className="reveal"><span className="section-label">02 / Approach</span><h2>Design the path before the parts.</h2><p>{detail.body[1] ?? detail.body[0]}</p></article>
+        <article id="system" className="reveal"><span className="section-label">03 / System</span><h2>What went into it.</h2><ul>{detail.whatWentIn.map(item => <li key={item}><span>↳</span>{item}</li>)}</ul></article>
+        <article id="result" className="reveal"><span className="section-label">04 / Result</span><h2>A clearer operational flow.</h2><p>The finished system connects the steps described above into one managed path, reducing the manual gaps in the original process. No quantitative result is claimed where verified metrics are unavailable.</p></article>
+      </div>
+    </div></section>
+    <section className="case-workflow-section"><div className="wrap"><span className="section-label">Workflow / Connected system</span><div className="case-workflow" aria-label="Project workflow">{detail.whatWentIn.slice(0,5).map((item,index)=><div key={item}><span>0{index+1}</span><p>{item}</p>{index < Math.min(4,detail.whatWentIn.length-1) && <i aria-hidden="true">→</i>}</div>)}</div></div></section>
+    <section className="case-gallery-section"><div className="wrap"><div className="section-heading reveal"><span className="section-label">Interface / Details</span><h2>The system in use.</h2><p>Meaningful project screenshots. Select any image to inspect it in the accessible viewer.</p></div><ProjectGallery images={detail.gallery} /></div></section>
+    <section className="next-project"><div className="wrap"><span className="section-label">Next case study</span><Link href={`/work/${next.slug}`}><span>{next.tag}</span><strong>{next.title}</strong><b>↗</b></Link></div></section>
+    <section className="contact-ending"><div className="wrap reveal"><span className="section-label">Have a similar problem?</span><h2>Let’s map the system.</h2><Link className="button primary" href="/contact">Start a project <span>↗</span></Link></div></section>
+  </main><Footer /></>
 }

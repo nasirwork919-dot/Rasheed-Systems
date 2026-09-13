@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://rasheed-systems.vercel.app'),
   title: {
     template: '%s — Rasheed Systems',
-    default: 'Rasheed Systems — We build the systems that run your business.',
+    default: 'Rasheed Systems — Complex systems. Made clear.',
   },
   description: 'Rasheed Systems builds AI agents, automation, and custom software for companies in the US, UK, UAE, India, and Australia. Built by two brothers.',
   openGraph: {
@@ -23,13 +23,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
         <link
-          href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,700;12..96,800&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap"
           rel="stylesheet"
         />
         <link rel="icon" type="image/png" sizes="512x512" href="/logo-mark-512.png" />
         <link rel="apple-touch-icon" sizes="180x180" href="/favicon-180.png" />
       </head>
-      <body>{children}</body>
+      <body><a className="skip-link" href="#main-content">Skip to main content</a>{children}</body>
     </html>
   )
 }

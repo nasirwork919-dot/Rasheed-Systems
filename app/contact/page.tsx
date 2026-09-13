@@ -1,50 +1,14 @@
 import type { Metadata } from 'next'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
-import ContactForm from './ContactForm'
 import PageEffects from '@/components/PageEffects'
+import ContactForm from './ContactForm'
 
-export const metadata: Metadata = {
-  title: 'Contact',
-  description: 'Start a project with Rasheed Systems. Tell us what you\'re building and we\'ll map out how we\'d approach it.',
-  openGraph: {
-    title: 'Contact — Rasheed Systems',
-    description: 'Start a project with Rasheed Systems. Tell us what you\'re building and we\'ll map out how we\'d approach it.',
-    url: '/contact',
-  },
-}
+export const metadata: Metadata = { title: 'Contact', description: 'Start a project with Rasheed Systems. Describe the problem and speak directly with the founders.' }
 
 export default function ContactPage() {
-  return (
-    <>
-      <PageEffects />
-      <Header />
-      <main>
-        <section className="page-head">
-          <div className="ph-glow" />
-          <div className="wrap">
-            <div className="ph-grid">
-              <div className="ph-left">
-                <div className="eyebrow mono"><span className="bar" />Contact</div>
-                <h1>Tell us what you&apos;re <span className="accent">building</span>.</h1>
-                <p>Fill this out and you&apos;ll hear back from one of us — not a sales bot. The more detail, the better the first reply.</p>
-              </div>
-              <div className="ph-panel">
-                <div className="ph-panel-head">
-                  <span className="ph-panel-title">What to expect</span>
-                  <span className="ph-panel-tag"><span className="live" />Replying</span>
-                </div>
-                <div className="ph-row"><span className="k">First reply</span><span className="v">~ 1 day</span></div>
-                <div className="ph-row"><span className="k">You talk to</span><span className="v">The founders</span></div>
-                <div className="ph-row"><span className="k">Time zones</span><span className="v">US·UK·UAE·IN·AU</span></div>
-                <div className="ph-row"><span className="k">No</span><span className="v">Sales bots</span></div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <ContactForm />
-      </main>
-      <Footer />
-    </>
-  )
+  return <><PageEffects /><Header /><main id="main-content" tabIndex={-1} className="contact-page">
+    <section className="contact-hero"><div className="wrap"><span className="section-label">Contact / New enquiry</span><h1>Start with<br /><em>the problem.</em></h1><p>You’ll hear from one of the two people who may build it—not a sales layer.</p></div></section>
+    <section className="contact-main"><div className="wrap contact-layout"><aside className="contact-details reveal"><span className="section-label">Direct contact</span><h2>A useful first note can be simple.</h2><p>Tell us what currently happens, where it breaks down, and what a better version should make possible.</p><dl><div><dt>Email</dt><dd><a href="mailto:hello@rasheedsystems.com">hello@rasheedsystems.com</a></dd></div><div><dt>Based in</dt><dd>Pakistan · Working worldwide</dd></div><div><dt>You’ll speak with</dt><dd>Nasir or Zain Rasheed</dd></div></dl></aside><ContactForm /></div></section>
+  </main><Footer /></>
 }

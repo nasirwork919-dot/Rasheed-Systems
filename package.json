@@ -5,7 +5,9 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "screenshots": "node scripts/capture.mjs",
+    "hero:images": "node scripts/standardize-hero-images.mjs"
   },
   "dependencies": {
     "next": "^15.3.3",
@@ -16,6 +18,7 @@
     "@types/node": "^22.0.0",
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",
+    "sharp": "^0.34.5",
     "typescript": "^5.0.0"
   },
   "allowScripts": {

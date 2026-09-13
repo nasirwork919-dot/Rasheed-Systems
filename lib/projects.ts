@@ -1,6 +1,4 @@
-export type Project = {
-  href?: string
-  slug?: string
+type ProjectBase = {
   tag: string
   img: string
   title: string
@@ -10,6 +8,11 @@ export type Project = {
   category: 'Web' | 'GHL'
   homeGroup?: 'web' | 'ai' | 'ghl'
 }
+
+export type Project = ProjectBase & (
+  | { href: `https://${string}`; slug?: never }
+  | { slug: string; href?: never }
+)
 
 export const projects: Project[] = [
   {
@@ -33,7 +36,7 @@ export const projects: Project[] = [
     category: 'Web', homeGroup: 'web',
   },
   {
-    href: 'https://insurancewallets.com/',
+    href: 'https://www.insurancewallets.com/',
     tag: 'Marketplace',
     img: '/work/insurancewallets.jpg',
     title: 'Insurance Wallets',
