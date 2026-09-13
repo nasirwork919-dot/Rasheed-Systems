@@ -1,25 +1,30 @@
-import Image from 'next/image'
-
 export default function AboutHero() {
   return (
     <section className="about-hero-refined" aria-labelledby="about-title">
-      <div className="wrap about-hero-grid">
-        <div className="about-heading">
-          <span className="section-label">About / Rasheed Systems</span>
-          <h1 id="about-title">Two minds.<br /><em>One standard.</em></h1>
+      <div className="wrap">
+        <div className="about-hero-main">
+          <div className="about-hero-intro reveal">
+            <span className="section-label">ABOUT / RASHEED SYSTEMS</span>
+            <h1 id="about-title">Two minds.<br />One standard.</h1>
+            <p>A founder-run engineering studio operated by two brothers, Nasir and Zain Rasheed.</p>
+            <a className="line-link" href="#about-founders">Meet the studio <span aria-hidden="true">↓</span></a>
+          </div>
+          <div className="about-founders" id="about-founders" aria-labelledby="about-founders-title">
+            <h2 className="section-label" id="about-founders-title">THE PEOPLE BEHIND THE WORK</h2>
+            <ol className="about-founder-list">
+              <li className="reveal"><span>01</span><div><h3>Nasir Rasheed</h3><p>Founder</p></div></li>
+              <li className="reveal"><span>02</span><div><h3>Zain Rasheed</h3><p>Co-founder</p></div></li>
+            </ol>
+          </div>
         </div>
-        <div className="about-view about-plan">
-          <div className="about-curtain" aria-hidden="true" />
-          <div className="about-map" aria-hidden="true"><i /><i /><i /><i /><span>Map the operation</span></div>
-          <p><span>Nasir Rasheed</span>Architecture · AI systems · Delivery</p>
+        <div className="about-hero-principles">
+          <ul aria-label="Studio principles">
+            <li>Direct collaboration.</li>
+            <li>Clear communication.</li>
+            <li>Careful delivery.</li>
+          </ul>
         </div>
-        <div className="about-view about-build">
-          <div className="about-curtain" aria-hidden="true" />
-          <Image src="/work/strive-soccer-academy/strive-agent.webp" alt="A real AI agent dashboard built for Strive Soccer Academy" fill sizes="(max-width: 800px) 100vw, 48vw" priority />
-          <p><span>Zain Rasheed</span>Development · Product · Growth</p>
-        </div>
-        <p className="about-intro">A founder-run engineering studio operated by two brothers. One side maps the system; the other turns it into dependable software.</p>
-        <div className="about-connector" aria-hidden="true"><span>Plan</span><i /><span>Build</span></div>
+        <div className="about-hero-location"><span>Based in Pakistan.</span><span>Working worldwide.</span></div>
       </div>
     </section>
   )
