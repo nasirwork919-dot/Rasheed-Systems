@@ -6,6 +6,7 @@ import SelectedProjects from '@/components/SelectedProjects'
 import ServiceRail from '@/components/ServiceRail'
 import HomeHero from '@/components/HomeHero'
 import HomeProcess from '@/components/HomeProcess'
+import HomeFaq from '@/components/HomeFaq'
 
 export default function Home() {
   return (
@@ -32,6 +33,7 @@ export default function Home() {
         </section>
 
         <HomeProcess />
+        <HomeFaq />
 
         <section className="proof-section">
           <div className="wrap proof-grid reveal">

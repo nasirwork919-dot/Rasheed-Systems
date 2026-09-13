@@ -29,7 +29,7 @@ export default function SelectedProjects() {
           key={wordmark.slug}
         >
           <Image
-            src={`/images/project-wordmarks/${wordmark.slug}.png`}
+            src={`/images/project-wordmarks-white/${wordmark.slug}.png`}
             alt={wordmark.name}
             width={1774}
             height={887}
