@@ -8,7 +8,14 @@ export const metadata: Metadata = { title: 'Contact', description: 'Start a proj
 
 export default function ContactPage() {
   return <><PageEffects /><Header /><main id="main-content" tabIndex={-1} className="contact-page">
-    <section className="contact-hero"><div className="wrap"><span className="section-label">Contact / New enquiry</span><h1>Start with<br /><em>the problem.</em></h1><p>You’ll hear from one of the two people who may build it—not a sales layer.</p></div></section>
-    <section className="contact-main"><div className="wrap contact-layout"><aside className="contact-details reveal"><span className="section-label">Direct contact</span><h2>A useful first note can be simple.</h2><p>Tell us what currently happens, where it breaks down, and what a better version should make possible.</p><dl><div><dt>Email</dt><dd><a href="mailto:hello@rasheedsystems.com">hello@rasheedsystems.com</a></dd></div><div><dt>Based in</dt><dd>Pakistan · Working worldwide</dd></div><div><dt>You’ll speak with</dt><dd>Nasir or Zain Rasheed</dd></div></dl></aside><ContactForm /></div></section>
+    <section className="contact-enquiry" aria-labelledby="contact-title"><div className="wrap contact-enquiry-layout">
+      <header className="contact-intro reveal">
+        <span className="section-label">Contact / Rasheed Systems</span>
+        <h1 id="contact-title">Tell us what<br />you have in mind.</h1>
+        <p>A new product, a better workflow, or a system that needs attention. Start with a short outline.</p>
+      </header>
+      <ContactForm />
+      <p className="contact-location"><span>Based in Pakistan.</span><span>Working worldwide.</span></p>
+    </div></section>
   </main><Footer /></>
 }
