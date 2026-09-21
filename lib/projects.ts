@@ -125,4 +125,14 @@ export const projects: Project[] = [
     stack: 'GoHighLevel · Conversation AI · WordPress · Workflows',
     category: 'GHL', homeGroup: 'ghl',
   },
+  {
+    slug: 'journey-builder-pro',
+    tag: 'Training Platform',
+    img: '/images/projects/journey-builder-pro/landing-page.png',
+    title: 'Journey Builder Pro',
+    desc: 'A producer training and team-management platform connecting guided learning, business planning, assessments, and leader oversight.',
+    role: 'Product design & build',
+    stack: 'React · Supabase · Workflow Automation',
+    category: 'Web', homeGroup: 'web',
+  },
 ]

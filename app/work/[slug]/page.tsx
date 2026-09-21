@@ -6,10 +6,21 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import PageEffects from '@/components/PageEffects'
 import ProjectGallery from '@/components/ProjectGallery'
+import JourneyBuilderCaseStudy from '@/components/JourneyBuilderCaseStudy'
 import { projectDetails } from '@/lib/projectDetails'
 import { projects } from '@/lib/projects'
 
-export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> { const { slug } = await params; const item = projectDetails[slug]; return item ? { title: item.title, description: item.oneLiner } : {} }
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params
+  const item = projectDetails[slug]
+  if (!item) return {}
+  if (slug === 'journey-builder-pro') return {
+    title: 'Journey Builder Pro — Training Platform Case Study',
+    description: 'Explore how Rasheed Systems improved Journey Builder Pro with guided training, business inventory tools, leader dashboards, native quizzes, and avatar-led videos.',
+    openGraph: { images: [{ url: '/images/home-hero/10-journey-builder-pro.png', width: 1024, height: 1536, alt: 'Journey Builder Pro training platform' }] },
+  }
+  return { title: item.title, description: item.oneLiner }
+}
 export function generateStaticParams() { return Object.keys(projectDetails).map(slug => ({ slug })) }
 
 export default async function ProjectPage({ params }: { params: Promise<{ slug: string }> }) {
@@ -18,6 +29,8 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
   if (!detail) notFound()
   const caseProjects = projects.filter(project => project.slug)
   const next = caseProjects[(caseProjects.findIndex(project => project.slug === slug) + 1) % caseProjects.length]
+
+  if (slug === 'journey-builder-pro') return <JourneyBuilderCaseStudy detail={detail} next={next} />
 
   return <><PageEffects /><Header /><main id="main-content" tabIndex={-1}>
     <section className="case-hero"><div className="wrap"><Link href="/work" className="line-link">← All work</Link><span className="section-label">Case study / {detail.category}</span><h1>{detail.title}</h1><p>{detail.oneLiner}</p><dl className="case-spec"><div><dt>Platform</dt><dd>{detail.platform}</dd></div><div><dt>Industry</dt><dd>{detail.industry}</dd></div><div><dt>Scope</dt><dd>{detail.scope}</dd></div></dl></div></section>

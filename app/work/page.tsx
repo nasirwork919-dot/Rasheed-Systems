@@ -33,7 +33,7 @@ export default function WorkPage() {
       </div>
     </div></section>
     <section className="work-stage-section" id="projects"><div className="wrap"><WorkStage /></div></section>
-    <section className="archive-section"><div className="wrap"><div className="section-heading reveal"><span className="section-label">Archive / All projects</span><h2>Eleven builds.<br />Two full case studies.</h2><p>Case studies stay on this site. Other projects open their external project URL in a new tab.</p></div>
+    <section className="archive-section"><div className="wrap"><div className="section-heading reveal"><span className="section-label">Archive / All projects</span><h2>Twelve builds.<br />Three full case studies.</h2><p>Case studies stay on this site. Other projects open their external project URL in a new tab.</p></div>
       <div className="archive-list">{projects.map((project, index) => <ProjectLink project={project} className="archive-row reveal" key={project.slug ?? project.href}><span>{String(index + 1).padStart(2, '0')}</span><strong>{project.title}</strong><span>{project.tag}</span><span>{project.role}</span><span>{project.slug ? 'Read case study' : 'External site'} ↗</span></ProjectLink>)}</div>
     </div></section>
     <section className="work-closing" aria-labelledby="work-closing-title"><div className="wrap reveal">

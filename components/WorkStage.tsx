@@ -28,6 +28,7 @@ const projectCategories: Record<string, ProjectCategory[]> = {
   'UK Therapies': ['web'],
   ScholarSurge: ['ai', 'ghl', 'crm'],
   'Strive Soccer Academy': ['ai', 'ghl'],
+  'Journey Builder Pro': ['ai', 'web'],
 }
 
 export default function WorkStage() {

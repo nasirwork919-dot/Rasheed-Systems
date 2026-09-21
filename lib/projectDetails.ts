@@ -73,4 +73,37 @@ export const projectDetails: Record<string, ProjectDetail> = {
       { src: '/work/strive-soccer-academy/strive-form.webp',          caption: 'Automated player-profile intake form sent after the trial' },
     ],
   },
+
+  'journey-builder-pro': {
+    slug: 'journey-builder-pro',
+    title: 'Journey Builder Pro',
+    category: 'Training Platform / Web Application',
+    industry: 'Producer Training',
+    platform: 'React · TanStack Start · Supabase',
+    scope: 'Product Design · Development · Automation · AI Video',
+    oneLiner: 'A connected platform for producer training and team development.',
+    body: [
+      'The platform needed more consistent progress tracking, stronger content protection, clearer mobile navigation, and dependable actions throughout the learning journey. Recruit information, assessments, and leader visibility also needed to work together more effectively.',
+      'Rasheed Systems improved the existing producer-development platform across its interface, application workflows, access controls, and training content.',
+    ],
+    whatWentIn: [
+      'Six-phase, route-aware learning journey',
+      'Persistent Business Inventory and Story Builder',
+      'Leader roster, progress, licensing, and check-in tools',
+      'Native assessments with review and retake flows',
+      'Responsive navigation and lesson layouts',
+      'Protected content, permissions, and communication flows',
+      'Avatar-led Phase 3 training videos',
+    ],
+    gallery: [
+      { src: '/images/projects/journey-builder-pro/landing-page.png', caption: 'Journey Builder Pro landing page' },
+      { src: '/images/projects/journey-builder-pro/learning-journey.png', caption: 'Six-phase producer learning journey' },
+      { src: '/images/projects/journey-builder-pro/leader-dashboard.png', caption: 'Leader roster and progress dashboard using development accounts' },
+      { src: '/images/projects/journey-builder-pro/quiz-administration-redacted.png', caption: 'Quiz administration with answer-key content excluded' },
+      { src: '/images/projects/journey-builder-pro/mobile-journey.png', caption: 'Producer journey on a smaller screen' },
+      { src: '/images/projects/journey-builder-pro/mobile-resources.png', caption: 'Searchable resource library on mobile' },
+      { src: '/images/projects/journey-builder-pro/account-verification.png', caption: 'Account verification and resend flow' },
+      { src: '/images/projects/journey-builder-pro/phase-3-video-poster.png', caption: 'Frame from the Phase 3 introduction video' },
+    ],
+  },
 }

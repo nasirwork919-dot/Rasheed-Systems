@@ -44,4 +44,5 @@ export const homeHeroImages: HomeHeroImage[] = [
   heroImage('13-strive-trial-bookings', '13-strive-trial-bookings', 'Strive Soccer Academy', 'Strive Soccer Academy trial-booking dashboard'),
   heroImage('14-strive-conversation-ai', '14-strive-conversation-ai', 'Strive Soccer Academy', 'Strive Soccer Academy conversation AI dashboard'),
   heroImage('15-strive-booking-follow-up', '15-strive-booking-follow-up', 'Strive Soccer Academy', 'Strive Soccer Academy booking follow-up workflow'),
+  heroImage('16-journey-builder-pro', '10-journey-builder-pro', 'Journey Builder Pro', 'Journey Builder Pro training platform shown on laptop and tablet screens'),
 ]
