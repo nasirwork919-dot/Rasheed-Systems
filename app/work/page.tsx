@@ -7,7 +7,21 @@ import WorkStage from '@/components/WorkStage'
 import { projects } from '@/lib/projects'
 import ProjectLink from '@/components/ProjectLink'
 
-export const metadata: Metadata = { title: 'Work', description: 'Selected AI platforms, marketplaces, CRMs, GoHighLevel builds, and automation engineered by Rasheed Systems.' }
+const title = 'GoHighLevel, AI & SaaS Case Studies'
+const description = 'GoHighLevel CRMs, AI booking systems, SaaS platforms, and custom web applications we\'ve built for clients in the US, UK, UAE, and Australia.'
+
+export const metadata: Metadata = {
+  title,
+  description,
+  openGraph: {
+    type: 'website',
+    siteName: 'Rasheed Systems',
+    title: `${title} — Rasheed Systems`,
+    description,
+    images: [{ url: '/og-image.png', width: 1200, height: 630 }],
+  },
+  twitter: { card: 'summary_large_image', title: `${title} — Rasheed Systems`, description, images: ['/og-image.png'] },
+}
 
 const featuredProjects = [
   { title: 'N3rve', category: 'AI PLATFORM', description: 'A connected workspace for everyday tools.' },

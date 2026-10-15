@@ -14,12 +14,32 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params
   const item = projectDetails[slug]
   if (!item) return {}
+  const title = item.seoTitle ?? item.title
+  const description = item.seoDescription ?? item.oneLiner
   if (slug === 'journey-builder-pro') return {
-    title: 'Journey Builder Pro — Training Platform Case Study',
-    description: 'Explore how Rasheed Systems improved Journey Builder Pro with guided training, business inventory tools, leader dashboards, native quizzes, and avatar-led videos.',
-    openGraph: { images: [{ url: '/images/home-hero/10-journey-builder-pro.png', width: 1024, height: 1536, alt: 'Journey Builder Pro training platform' }] },
+    title,
+    description,
+    openGraph: {
+      type: 'website',
+      siteName: 'Rasheed Systems',
+      title: `${title} — Rasheed Systems`,
+      description,
+      images: [{ url: '/images/home-hero/10-journey-builder-pro.png', width: 1024, height: 1536, alt: 'Journey Builder Pro training platform' }],
+    },
+    twitter: { card: 'summary_large_image', title: `${title} — Rasheed Systems`, description, images: ['/images/home-hero/10-journey-builder-pro.png'] },
   }
-  return { title: item.title, description: item.oneLiner }
+  return {
+    title,
+    description,
+    openGraph: {
+      type: 'website',
+      siteName: 'Rasheed Systems',
+      title: `${title} — Rasheed Systems`,
+      description,
+      images: [{ url: '/og-image.png', width: 1200, height: 630 }],
+    },
+    twitter: { card: 'summary_large_image', title: `${title} — Rasheed Systems`, description, images: ['/og-image.png'] },
+  }
 }
 export function generateStaticParams() { return Object.keys(projectDetails).map(slug => ({ slug })) }
 

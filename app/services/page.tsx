@@ -16,7 +16,21 @@ const serviceIndex = [
   { number: '04', label: 'CRMs & marketplaces', href: '#service-crms-marketplaces' },
 ] as const
 
-export const metadata: Metadata = { title: 'Services', description: 'AI agents and automation, SaaS and web apps, GoHighLevel builds, custom CRMs and marketplaces—built by Rasheed Systems.' }
+const title = 'GoHighLevel, AI & SaaS Development Services'
+const description = 'GoHighLevel development, AI automation, and custom web application development services, from AI SaaS platforms to client portals and dashboards, built by a SaaS development company that writes real code.'
+
+export const metadata: Metadata = {
+  title,
+  description,
+  openGraph: {
+    type: 'website',
+    siteName: 'Rasheed Systems',
+    title: `${title} — Rasheed Systems`,
+    description,
+    images: [{ url: '/og-image.png', width: 1200, height: 630 }],
+  },
+  twitter: { card: 'summary_large_image', title: `${title} — Rasheed Systems`, description, images: ['/og-image.png'] },
+}
 
 export default function ServicesPage() {
   return <><PageEffects /><Header /><main id="main-content" tabIndex={-1}>

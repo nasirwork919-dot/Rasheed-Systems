@@ -1,13 +1,16 @@
 import type { Metadata } from 'next'
 import './globals.css'
 
+const defaultTitle = 'GoHighLevel Developer & AI Automation Agency — Rasheed Systems'
+const defaultDescription = 'GoHighLevel developer and AI automation agency. We build GHL API integrations, custom dashboards, and AI booking systems connected to your CRM.'
+
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.rasheedsystems.com'),
   title: {
     template: '%s — Rasheed Systems',
-    default: 'Rasheed Systems — Complex systems. Made clear.',
+    default: defaultTitle,
   },
-  description: 'Rasheed Systems builds AI agents, automation, and custom software for companies in the US, UK, UAE, India, and Australia. Built by two brothers.',
+  description: defaultDescription,
   openGraph: {
     type: 'website',
     siteName: 'Rasheed Systems',

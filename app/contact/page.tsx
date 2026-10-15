@@ -4,7 +4,21 @@ import Footer from '@/components/Footer'
 import PageEffects from '@/components/PageEffects'
 import ContactForm from './ContactForm'
 
-export const metadata: Metadata = { title: 'Contact', description: 'Start a project with Rasheed Systems. Describe the problem and speak directly with the founders.' }
+const title = 'Hire a GoHighLevel Developer'
+const description = 'Need a GoHighLevel developer or an AI booking system? Tell us what you\'re building and speak directly with the engineers who\'ll build it.'
+
+export const metadata: Metadata = {
+  title,
+  description,
+  openGraph: {
+    type: 'website',
+    siteName: 'Rasheed Systems',
+    title: `${title} — Rasheed Systems`,
+    description,
+    images: [{ url: '/og-image.png', width: 1200, height: 630 }],
+  },
+  twitter: { card: 'summary_large_image', title: `${title} — Rasheed Systems`, description, images: ['/og-image.png'] },
+}
 
 export default function ContactPage() {
   return <><PageEffects /><Header /><main id="main-content" tabIndex={-1} className="contact-page">

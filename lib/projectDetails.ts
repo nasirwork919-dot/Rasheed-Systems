@@ -8,6 +8,8 @@ export type ProjectDetail = {
   platform: string
   scope: string
   oneLiner: string
+  seoTitle?: string
+  seoDescription?: string
   body: string[]
   whatWentIn: string[]
   gallery: GalleryImage[]
@@ -22,6 +24,8 @@ export const projectDetails: Record<string, ProjectDetail> = {
     platform: 'GoHighLevel',
     scope: 'Full build',
     oneLiner: 'CRM, an AI booking bot, and the automations behind a student-enrollment business.',
+    seoTitle: 'ScholarSurge: GoHighLevel CRM & AI Booking System',
+    seoDescription: 'How we built a GoHighLevel CRM, an AI booking system, and enrollment automations for ScholarSurge, a student-enrollment business.',
     body: [
       'This client runs enrollment for schools and academies. Leads were coming in from Facebook ads and quiz funnels, but plenty of them went cold before anyone got back to them. I built out their GoHighLevel account to close that gap.',
       'Every lead gets tagged by where it came from and dropped into a pipeline. An AI chatbot picks it up, asks a couple of qualifying questions, and books the person straight into a call. If they don\'t book, or they miss the slot, separate sequences follow up by text on their own. The dashboard shows where each deal sits, so nothing gets lost between stages.',
@@ -52,6 +56,8 @@ export const projectDetails: Record<string, ProjectDetail> = {
     platform: 'GoHighLevel · WordPress',
     scope: 'Full build',
     oneLiner: 'An end-to-end AI trial-booking system for a youth soccer academy — a conversational setter that qualifies and books leads into the right age-group calendar, plus a rebuilt website booking flow and full post-booking automation.',
+    seoTitle: 'AI Booking System for Strive Soccer Academy',
+    seoDescription: 'An AI booking system that qualifies leads and books trials into age-group calendars, plus a rebuilt booking flow and post-booking automation for Strive Soccer Academy.',
     body: [
       'Strive Soccer Academy runs free trial assessment sessions for kids, grouped by birth-year cohort and split into boys\' and girls\' sessions — eight calendars in total. Leads arrived from Facebook lead ads into GoHighLevel, but nothing engaged them automatically, and the website funnelled every parent onto a single page showing all eight calendars at once.',
       'I built a complete booking system across GoHighLevel and WordPress. An AI setter now greets each parent over SMS or WhatsApp, finds out the child\'s birth year and gender one question at a time, and books the trial into the correct calendar automatically — no parent ever has to choose from eight options. On the website side, a two-question survey replaced the cluttered calendar page: pick a birth year, then son or daughter, and only the relevant calendar loads. Every booking then triggers a workflow that sends the waiver, confirmation, and staged reminders without any manual effort.',
@@ -82,6 +88,8 @@ export const projectDetails: Record<string, ProjectDetail> = {
     platform: 'React · TanStack Start · Supabase',
     scope: 'Product Design · Development · Automation · AI Video',
     oneLiner: 'A connected platform for producer training and team development.',
+    seoTitle: 'Journey Builder Pro: Training Platform Development',
+    seoDescription: 'How we developed Journey Builder Pro, a custom training platform with guided lessons, quizzes, leader dashboards, business inventory tools, and avatar-led videos.',
     body: [
       'The platform needed more consistent progress tracking, stronger content protection, clearer mobile navigation, and dependable actions throughout the learning journey. Recruit information, assessments, and leader visibility also needed to work together more effectively.',
       'Rasheed Systems improved the existing producer-development platform across its interface, application workflows, access controls, and training content.',
