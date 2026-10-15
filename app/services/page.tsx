@@ -22,6 +22,7 @@ const description = 'GoHighLevel development, AI automation, and custom web appl
 export const metadata: Metadata = {
   title,
   description,
+  alternates: { canonical: '/services' },
   openGraph: {
     type: 'website',
     siteName: 'Rasheed Systems',

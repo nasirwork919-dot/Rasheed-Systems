@@ -1,3 +1,4 @@
+import type { Metadata } from 'next'
 import Link from 'next/link'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
@@ -7,6 +8,8 @@ import ServiceRail from '@/components/ServiceRail'
 import HomeHero from '@/components/HomeHero'
 import HomeProcess from '@/components/HomeProcess'
 import HomeFaq from '@/components/HomeFaq'
+
+export const metadata: Metadata = { alternates: { canonical: '/' } }
 
 export default function Home() {
   return (

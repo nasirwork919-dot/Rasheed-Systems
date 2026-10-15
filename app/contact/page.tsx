@@ -10,6 +10,7 @@ const description = 'Need a GoHighLevel developer or an AI booking system? Tell 
 export const metadata: Metadata = {
   title,
   description,
+  alternates: { canonical: '/contact' },
   openGraph: {
     type: 'website',
     siteName: 'Rasheed Systems',

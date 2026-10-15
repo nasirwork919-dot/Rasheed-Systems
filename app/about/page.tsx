@@ -7,7 +7,7 @@ import AboutHero from '@/components/AboutHero'
 import WorkingTogether from '@/components/WorkingTogether'
 import StudioTimeline from '@/components/StudioTimeline'
 
-export const metadata: Metadata = { title: 'About', description: 'Rasheed Systems is a founder-run software engineering studio operated by brothers Nasir and Zain Rasheed.' }
+export const metadata: Metadata = { title: 'About', description: 'Rasheed Systems is a founder-run software engineering studio operated by brothers Nasir and Zain Rasheed.', alternates: { canonical: '/about' } }
 
 export default function AboutPage() {
   return <><PageEffects /><Header /><main id="main-content" tabIndex={-1}>

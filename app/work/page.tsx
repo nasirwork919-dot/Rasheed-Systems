@@ -13,6 +13,7 @@ const description = 'GoHighLevel CRMs, AI booking systems, SaaS platforms, and c
 export const metadata: Metadata = {
   title,
   description,
+  alternates: { canonical: '/work' },
   openGraph: {
     type: 'website',
     siteName: 'Rasheed Systems',

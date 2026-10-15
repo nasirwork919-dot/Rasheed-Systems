@@ -16,9 +16,11 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!item) return {}
   const title = item.seoTitle ?? item.title
   const description = item.seoDescription ?? item.oneLiner
+  const canonical = `/work/${slug}`
   if (slug === 'journey-builder-pro') return {
     title,
     description,
+    alternates: { canonical },
     openGraph: {
       type: 'website',
       siteName: 'Rasheed Systems',
@@ -31,6 +33,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return {
     title,
     description,
+    alternates: { canonical },
     openGraph: {
       type: 'website',
       siteName: 'Rasheed Systems',
