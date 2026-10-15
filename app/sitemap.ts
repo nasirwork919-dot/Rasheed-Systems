@@ -2,7 +2,7 @@ import type { MetadataRoute } from 'next'
 import { projectDetails } from '@/lib/projectDetails'
 
 const baseUrl = 'https://www.rasheedsystems.com'
-const staticRoutes = ['/', '/services', '/services/gohighlevel', '/work', '/about', '/contact']
+const staticRoutes = ['/', '/services', '/services/ai-automation', '/services/gohighlevel', '/work', '/about', '/contact']
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date()

@@ -14,12 +14,14 @@ const homeServices = [
   {
     number: '01', title: 'AI & automation', text: 'Connect your tools, handle repetitive tasks, and keep work moving.',
     capabilities: ['AI agents', 'Integrations', 'Workflows'], project: project('Chatsites'),
+    href: '/services/ai-automation',
     label: 'In practice / Chatsites', projectTitle: 'A conversational path from visit to lead.',
     projectText: 'An AI-powered conversational website that guides visitors into useful next steps.', width: 1000, height: 470,
   },
   {
     number: '02', title: 'GoHighLevel', text: 'Turn enquiries into conversations, bookings and organised follow-up.',
     capabilities: ['Pipelines', 'Calendars', 'Workflows'], project: project('Strive Soccer Academy'),
+    href: '/services/gohighlevel',
     label: 'In practice / Strive Soccer Academy', projectTitle: 'A connected trial-booking system.',
     projectText: 'Enquiries, scheduling and follow-up in one workspace.', width: 1568, height: 753,
     image: '/work/strive-soccer-academy/strive-booking-homepage.public.webp',
@@ -27,12 +29,14 @@ const homeServices = [
   {
     number: '03', title: 'Web apps & SaaS', text: 'Build useful products with clear interfaces and dependable foundations.',
     capabilities: ['Product design', 'Development', 'Integrations'], project: project('N3rve'),
+    href: '/services',
     label: 'In practice / N3rve', projectTitle: 'One workspace for the tools teams already use.',
     projectText: 'AI, billing, customers and content brought together in one connected product.', width: 1000, height: 451,
   },
   {
     number: '04', title: 'CRMs & marketplaces', text: 'Bring customers, teams and daily operations into one connected system.',
     capabilities: ['Custom CRM', 'Marketplaces', 'Reporting'], project: project('Euro World CRM'),
+    href: '/services',
     label: 'In practice / Euro World CRM', projectTitle: 'Daily operations in one command centre.',
     projectText: 'Leads, walk-ins, invoicing, payments and reporting in one workspace.', width: 1000, height: 476,
   },
@@ -91,7 +95,7 @@ export default function ServiceRail({ compact = false }: { compact?: boolean }) 
                   {active && <div className="home-service-detail" id={`home-service-${service.number}`}>
                     <p>{service.text}</p>
                     <ul className="home-service-capabilities">{service.capabilities.map(item => <li key={item}>{item}</li>)}</ul>
-                    <Link className="home-service-link" href={service.title === 'GoHighLevel' ? '/services/gohighlevel' : '/services'}>Explore service <span aria-hidden="true">↗</span></Link>
+                    <Link className="home-service-link" href={service.href}>Explore service <span aria-hidden="true">↗</span></Link>
                   </div>}
                 </article>
               )

@@ -123,7 +123,10 @@ export default function AiAutomationDetail() {
           <p className="automation-note">Your team stays in control of decisions and replies.</p>
         </div>
 
-        <Link className="ai-automation-cta" href="/contact">Discuss an automation <span aria-hidden="true">↗</span></Link>
+        <div className="ai-automation-actions">
+          <Link className="ai-automation-cta" href="/contact">Discuss an automation <span aria-hidden="true">↗</span></Link>
+          <Link className="line-link" href="/services/ai-automation">See AI automation services <span aria-hidden="true">↗</span></Link>
+        </div>
       </div>
     </article>
   )
