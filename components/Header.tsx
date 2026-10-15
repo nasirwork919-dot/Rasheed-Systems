@@ -69,7 +69,7 @@ export default function Header({ variant = 'default' }: { variant?: 'default' | 
     }
   }, [open])
 
-  const active = (href: string) => pathname === href || (href === '/work' && pathname.startsWith('/work/'))
+  const active = (href: string) => pathname === href || (href === '/work' && pathname.startsWith('/work/')) || (href === '/services' && pathname.startsWith('/services/'))
 
   return (
     <header className={`site-header${variant === 'home' && overHomeHero ? ' site-header-home' : ''}`}>

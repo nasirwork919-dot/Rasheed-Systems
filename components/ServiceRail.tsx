@@ -91,7 +91,7 @@ export default function ServiceRail({ compact = false }: { compact?: boolean }) 
                   {active && <div className="home-service-detail" id={`home-service-${service.number}`}>
                     <p>{service.text}</p>
                     <ul className="home-service-capabilities">{service.capabilities.map(item => <li key={item}>{item}</li>)}</ul>
-                    <Link className="home-service-link" href="/services">Explore service <span aria-hidden="true">↗</span></Link>
+                    <Link className="home-service-link" href={service.title === 'GoHighLevel' ? '/services/gohighlevel' : '/services'}>Explore service <span aria-hidden="true">↗</span></Link>
                   </div>}
                 </article>
               )

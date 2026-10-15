@@ -109,7 +109,10 @@ export default function GoHighLevelDetail() {
           <div className="ghl-pipeline-notes"><p>Keep your team informed.</p><p>Make the next action clear.</p></div>
         </div>
 
-        <Link className="ghl-detail-cta" href="/contact">Discuss your GHL setup <span aria-hidden="true">↗</span></Link>
+        <div className="ghl-detail-actions">
+          <Link className="ghl-detail-cta" href="/contact">Discuss your GHL setup <span aria-hidden="true">↗</span></Link>
+          <Link className="line-link" href="/services/gohighlevel">See GoHighLevel services <span aria-hidden="true">↗</span></Link>
+        </div>
       </div>
     </article>
   )
