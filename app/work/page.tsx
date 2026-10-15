@@ -8,7 +8,7 @@ import { projects } from '@/lib/projects'
 import ProjectLink from '@/components/ProjectLink'
 
 const title = 'GoHighLevel, AI & SaaS Case Studies'
-const description = 'GoHighLevel CRMs, AI booking systems, SaaS platforms, and custom web applications we\'ve built for clients in the US, UK, UAE, and Australia.'
+const description = 'GoHighLevel CRMs, AI booking systems, SaaS platforms, custom CRMs, and marketplaces we\'ve built for clients in the US, UK, UAE, and Australia.'
 
 export const metadata: Metadata = {
   title,

@@ -17,7 +17,7 @@ const serviceIndex = [
 ] as const
 
 const title = 'GoHighLevel, AI & SaaS Development Services'
-const description = 'GoHighLevel development, AI automation, and custom web application development services, from AI SaaS platforms to client portals and dashboards, built by a SaaS development company that writes real code.'
+const description = 'GoHighLevel development, AI automation, custom web apps and SaaS, plus custom CRM and marketplace development. Built by engineers who write real code.'
 
 export const metadata: Metadata = {
   title,
