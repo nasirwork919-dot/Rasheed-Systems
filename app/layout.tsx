@@ -4,6 +4,40 @@ import './globals.css'
 const defaultTitle = 'GoHighLevel Developer & AI Automation Agency | Rasheed Systems'
 const defaultDescription = 'GoHighLevel developer and AI automation agency. We build GHL API integrations, custom dashboards, and AI booking systems connected to your CRM.'
 
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Organization',
+      '@id': 'https://www.rasheedsystems.com/#organization',
+      name: 'Rasheed Systems',
+      url: 'https://www.rasheedsystems.com',
+      logo: 'https://www.rasheedsystems.com/logo-mark-512.png',
+      email: 'hello@rasheedsystems.com',
+      foundingDate: '2023',
+      founder: {
+        '@type': 'Person',
+        name: 'Nasir Ali Rasheed',
+      },
+      areaServed: [
+        { '@type': 'Country', name: 'United States' },
+        { '@type': 'Country', name: 'United Kingdom' },
+        { '@type': 'Country', name: 'United Arab Emirates' },
+        { '@type': 'Country', name: 'Australia' },
+      ],
+      description: defaultDescription,
+      sameAs: ['https://www.fiverr.com/s/Eg3AENe'],
+    },
+    {
+      '@type': 'WebSite',
+      '@id': 'https://www.rasheedsystems.com/#website',
+      name: 'Rasheed Systems',
+      url: 'https://www.rasheedsystems.com',
+      publisher: { '@id': 'https://www.rasheedsystems.com/#organization' },
+    },
+  ],
+}
+
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.rasheedsystems.com'),
   title: {
@@ -31,6 +65,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
         <link rel="icon" type="image/png" sizes="512x512" href="/logo-mark-512.png" />
         <link rel="apple-touch-icon" sizes="180x180" href="/favicon-180.png" />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
       </head>
       <body><a className="skip-link" href="#main-content">Skip to main content</a>{children}</body>
     </html>
