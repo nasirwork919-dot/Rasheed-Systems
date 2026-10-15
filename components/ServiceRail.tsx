@@ -123,7 +123,7 @@ export default function ServiceRail({ compact = false }: { compact?: boolean }) 
         <div className="service-track" ref={trackRef}>
           {services.map((service, index) => (
             <article className="service-chapter" key={service.number}>
-              <span className="chapter-number">S—{service.number}</span>
+              <span className="chapter-number">S-{service.number}</span>
               <div><h3>{service.title}</h3><p>{service.text}</p></div>
               <ul>{service.list.map(item => <li key={item}>{item}</li>)}</ul>
               <ServiceDiagram kind={diagramKinds[index]} />

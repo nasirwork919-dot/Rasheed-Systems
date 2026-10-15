@@ -38,7 +38,7 @@ export async function POST(request: Request) {
   const from = process.env.CONTACT_FROM_EMAIL
   if (!apiKey || !to || !from) return NextResponse.json({ error: 'The contact service is not configured yet. Please email hello@rasheedsystems.com.' }, { status: 503 })
 
-  const response = await fetch('https://api.resend.com/emails', { method: 'POST', headers: { Authorization: `Bearer ${apiKey}`, 'Content-Type': 'application/json' }, body: JSON.stringify({ from, to: [to], reply_to: email, subject: `Project enquiry${company ? ` — ${company}` : ''}`, text: `Name: ${name}\nEmail: ${email}\nCompany / website: ${company || '—'}\nServices: ${services.join(', ') || '—'}\n\nProject details:\n${message}` }) })
+  const response = await fetch('https://api.resend.com/emails', { method: 'POST', headers: { Authorization: `Bearer ${apiKey}`, 'Content-Type': 'application/json' }, body: JSON.stringify({ from, to: [to], reply_to: email, subject: `Project enquiry${company ? ` from ${company}` : ''}`, text: `Name: ${name}\nEmail: ${email}\nCompany / website: ${company || 'Not provided'}\nServices: ${services.join(', ') || 'Not provided'}\n\nProject details:\n${message}` }) })
   if (!response.ok) return NextResponse.json({ error: 'The message could not be delivered. Please try again or email us directly.' }, { status: 502 })
   return NextResponse.json({ ok: true })
 }

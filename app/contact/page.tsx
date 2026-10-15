@@ -13,11 +13,11 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     siteName: 'Rasheed Systems',
-    title: `${title} — Rasheed Systems`,
+    title: `${title} | Rasheed Systems`,
     description,
     images: [{ url: '/og-image.png', width: 1200, height: 630 }],
   },
-  twitter: { card: 'summary_large_image', title: `${title} — Rasheed Systems`, description, images: ['/og-image.png'] },
+  twitter: { card: 'summary_large_image', title: `${title} | Rasheed Systems`, description, images: ['/og-image.png'] },
 }
 
 export default function ContactPage() {

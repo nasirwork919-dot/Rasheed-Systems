@@ -107,7 +107,7 @@ export default function WebAppsSaasDetail() {
 
                 {selectedView === 'files' && <>
                   <h3>Project files</h3>
-                  <p>Sample files — preview only</p>
+                  <p>Sample files (preview only)</p>
                   <ul className="webapp-file-list">
                     {sampleFiles.map(file => <li key={file.name}><strong>{file.name}</strong><span>{file.project}</span></li>)}
                   </ul>

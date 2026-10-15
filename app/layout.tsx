@@ -1,13 +1,13 @@
 import type { Metadata } from 'next'
 import './globals.css'
 
-const defaultTitle = 'GoHighLevel Developer & AI Automation Agency — Rasheed Systems'
+const defaultTitle = 'GoHighLevel Developer & AI Automation Agency | Rasheed Systems'
 const defaultDescription = 'GoHighLevel developer and AI automation agency. We build GHL API integrations, custom dashboards, and AI booking systems connected to your CRM.'
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.rasheedsystems.com'),
   title: {
-    template: '%s — Rasheed Systems',
+    template: '%s | Rasheed Systems',
     default: defaultTitle,
   },
   description: defaultDescription,

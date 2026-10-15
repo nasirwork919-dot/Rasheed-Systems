@@ -55,12 +55,12 @@ export const projectDetails: Record<string, ProjectDetail> = {
     industry: 'Youth Sports',
     platform: 'GoHighLevel · WordPress',
     scope: 'Full build',
-    oneLiner: 'An end-to-end AI trial-booking system for a youth soccer academy — a conversational setter that qualifies and books leads into the right age-group calendar, plus a rebuilt website booking flow and full post-booking automation.',
+    oneLiner: 'An end-to-end AI trial-booking system for a youth soccer academy. A conversational setter qualifies leads and books them into the right age-group calendar, backed by a rebuilt website booking flow and full post-booking automation.',
     seoTitle: 'AI Booking System for Strive Soccer Academy',
     seoDescription: 'An AI booking system that qualifies leads and books trials into age-group calendars, plus a rebuilt booking flow and post-booking automation for Strive Soccer Academy.',
     body: [
-      'Strive Soccer Academy runs free trial assessment sessions for kids, grouped by birth-year cohort and split into boys\' and girls\' sessions — eight calendars in total. Leads arrived from Facebook lead ads into GoHighLevel, but nothing engaged them automatically, and the website funnelled every parent onto a single page showing all eight calendars at once.',
-      'I built a complete booking system across GoHighLevel and WordPress. An AI setter now greets each parent over SMS or WhatsApp, finds out the child\'s birth year and gender one question at a time, and books the trial into the correct calendar automatically — no parent ever has to choose from eight options. On the website side, a two-question survey replaced the cluttered calendar page: pick a birth year, then son or daughter, and only the relevant calendar loads. Every booking then triggers a workflow that sends the waiver, confirmation, and staged reminders without any manual effort.',
+      'Strive Soccer Academy runs free trial assessment sessions for kids, grouped by birth-year cohort and split into boys\' and girls\' sessions. That\'s eight calendars in total. Leads arrived from Facebook lead ads into GoHighLevel, but nothing engaged them automatically, and the website funnelled every parent onto a single page showing all eight calendars at once.',
+      'I built a complete booking system across GoHighLevel and WordPress. An AI setter now greets each parent over SMS or WhatsApp, finds out the child\'s birth year and gender one question at a time, and books the trial into the correct calendar automatically, so no parent ever has to choose from eight options. On the website side, a two-question survey replaced the cluttered calendar page: pick a birth year, then son or daughter, and only the relevant calendar loads. Every booking then triggers a workflow that sends the waiver, confirmation, and staged reminders without any manual effort.',
     ],
     whatWentIn: [
       'AI setter that qualifies and books leads over SMS/WhatsApp',
